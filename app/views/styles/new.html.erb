@@ -1,0 +1,17 @@
+<form action="/styles" method="post">
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+
+    <input type="text" name = 'studioname' placeholder = 'enter studio name'>
+    <input type="text" name = 'studiowebsiteurl' placeholder = 'enter website'>
+    <input type="text" name = 'hairdressername' placeholder = 'enter hairdresser name'>
+    <input type="text" name = 'hairpicfront' placeholder = 'enter pic front'>
+    <input type="text" name = 'hairpicback' placeholder = 'enter pic back'>
+    <input type="text" name = 'hairpicside' placeholder = 'enter pic'>
+
+    <input type="text" name = 'price' placeholder = 'enter price'>
+    <input type="text" name = 'rating' placeholder = 'rate experience 1 - 5'>
+    <input type="text" name = 'tag' placeholder = 'tags: MEN: undercut / fade / sidepart / short back and sides // FEM: cut / colour / styling '>
+
+    <button>add new style</button>
+
+</form>
