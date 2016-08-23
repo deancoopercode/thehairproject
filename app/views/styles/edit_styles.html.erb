@@ -1,0 +1,38 @@
+<!-- <form action="/styles/<%= @style.id %>" method="post"> -->
+
+  <input type="hidden" name="_method" value="put">
+
+  <label for="image_url">Image 1 url</label>
+  <input type="text" name=image_url value="<%= @style.image_url %>">
+
+  <label for="image_url">Image 2 url</label>
+  <input type="text" name=image_url value="<%= @style.image_url %>">
+
+  <label for="image_url">Image 3 url</label>
+  <input type="text" name=image_url value="<%= @style.image_url %>">
+
+  <label for="description">Description</label>
+  <textarea name="description" rows="5" cols="30" value="<%= @style.description %>"></textarea>
+
+  <label for="price">Price</label>
+  <input type="text" name=price value="<%= ??? %>">
+
+  <label for="location">Location</label>
+  <input type="text" name=location value="<%= ??? %>">
+
+  <label for="hairstylist_name">Hairstylist Name</label>
+  <input type="text" name=hairstylistname value="<%= ??? %>">
+
+  <label for="url">Website/Social Media Link</label>
+  <input type="text" name="url" value="<%= ??? .url %>">
+
+  <button>Update</button>
+
+<!-- </form> -->
+
+<!-- <form action="/styles/<%= @style.id %>" method="post"> -->
+
+  <input type="hidden" name="_method" value="delete">
+  <button>Delete post</button>
+
+<!-- </form> -->
