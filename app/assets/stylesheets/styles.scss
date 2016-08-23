@@ -1,3 +1,21 @@
 // Place all the styles related to the styles controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+#video_holder {
+  z-index  : 0;
+  position : absolute;
+  top      : 0px;
+  width    : 100%;
+  height   : 300px;
+  overflow : hidden;
+}
+
+video#bgvid {
+  z-index           : -100;
+  position          : absolute;
+  width             : 100%;
+  -ms-transform     : translateY(-20%);
+  -webkit-transform : translateY(-20%);
+  transform         : translateY(-20%);
+}
