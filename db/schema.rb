@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160822064226) do
+ActiveRecord::Schema.define(version: 20160823015921) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,14 +22,20 @@ ActiveRecord::Schema.define(version: 20160822064226) do
     t.integer  "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer  "comment_id"
-    t.index ["comment_id"], name: "index_comments_on_comment_id", using: :btree
     t.index ["style_id"], name: "index_comments_on_style_id", using: :btree
     t.index ["user_id"], name: "index_comments_on_user_id", using: :btree
   end
 
+  create_table "likes", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "style_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["style_id"], name: "index_likes_on_style_id", using: :btree
+    t.index ["user_id"], name: "index_likes_on_user_id", using: :btree
+  end
+
   create_table "styles", force: :cascade do |t|
-    t.string   "type"
     t.string   "studioname"
     t.string   "studiowebsiteurl"
     t.string   "hairdressername"
@@ -40,8 +46,9 @@ ActiveRecord::Schema.define(version: 20160822064226) do
     t.integer  "rating"
     t.datetime "created_at",                                null: false
     t.datetime "updated_at",                                null: false
-    t.integer  "style_id"
-    t.index ["style_id"], name: "index_styles_on_style_id", using: :btree
+    t.integer  "user_id"
+    t.string   "tag"
+    t.index ["user_id"], name: "index_styles_on_user_id", using: :btree
   end
 
   create_table "users", force: :cascade do |t|
@@ -53,8 +60,9 @@ ActiveRecord::Schema.define(version: 20160822064226) do
     t.string   "gender"
   end
 
-  add_foreign_key "comments", "comments"
   add_foreign_key "comments", "styles"
   add_foreign_key "comments", "users"
-  add_foreign_key "styles", "styles"
+  add_foreign_key "likes", "styles"
+  add_foreign_key "likes", "users"
+  add_foreign_key "styles", "users"
 end
