@@ -6,9 +6,9 @@ Comment.destroy_all
 Style.destroy_all
 User.destroy_all
 
-u1 = User.create({ name: 'dean', password: 'dean' })
-u2 = User.create({ name: 'denis',password: 'denis' })
-u3 = User.create({ name: 'magda',password: 'magda' })
+u1 = User.create({ name: 'dean', password: 'dean', email: 'dean@ga.co', gender: 'M' })
+u2 = User.create({ name: 'denis',password: 'denis', email: 'denis@ga.co', gender: 'M' })
+u3 = User.create({ name: 'magda',password: 'magda', email: 'magda@ga.co', gender: 'F' })
 
   # female front - http://i.imgur.com/RVFAG7y.png
   # female back - http://i.imgur.com/X7aNUPQ.png

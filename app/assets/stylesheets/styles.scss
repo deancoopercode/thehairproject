@@ -19,3 +19,62 @@ video#bgvid {
   -webkit-transform : translateY(-20%);
   transform         : translateY(-20%);
 }
+//Deans below
+
+.avatar {
+  width: 2em;
+  height: 2em;
+  border-radius: 100%; /* same as 2em but less to worry about */
+  display: inline-block;
+  vertical-align: middle;
+  /*these 2 go together - without this it was having spaces in the bottom, and DT wasnt centered*/
+}
+
+a {
+  color: darkblue;
+  text-decoration: underline;
+}
+.content {
+  padding: .7em;
+}
+
+.right {
+  float: right;
+}
+
+.ui-style {
+  width: 24%;
+  background-color: lightblue;
+  display: inline-block;
+  vertical-align: top;
+  margin: 0.5%;
+  border-radius: 10px;
+}
+
+.listing {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.centered {
+  line-height: 2em;
+}
+
+h4 {
+  margin: 0;
+  padding: 0;
+}
+.star {
+  transition: 1s;
+}
+
+.image img {
+  width: 100%;
+}
+
+.star:hover {
+  /*display: block;*/
+  cursor: pointer;
+  color: red;
+  opacity: 1;
+}
