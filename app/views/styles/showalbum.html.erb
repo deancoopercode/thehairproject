@@ -1,19 +1,6 @@
 
 <div class = "wrapper">
 
-  <div class = "video_banner">
-
-    <div id = "video_holder">
-      <video playsinline autoplay muted loop id="bgvid">
-        <source src="video/slowhair.mp4" type="video/mp4">
-      </video>
-    </div>
-
-    <div class = "filter">
-      <h3>Styles</h3>
-    </div>
-  </div>
-
   <div class="listing">
     <% @styles.each do |style| %>
         <div class="ui-style" data-id="<%= style.id %>">
@@ -31,6 +18,7 @@
           </div>
         </div>
     <% end %>
+
     </div>
   </div>
 

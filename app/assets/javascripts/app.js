@@ -9,7 +9,7 @@
 // });
 
 $('document').ready(function(){
-
+  console.log('doc ready');
   $('.js-like').on('click', function() {
     console.log('liking a style');
     // debugger

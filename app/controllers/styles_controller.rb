@@ -38,7 +38,6 @@ class StylesController < ApplicationController
     @style = Style.find(params[:id])
   end
 
-
   # patch/put /styles/ID
   def update
     @style = Style.find(params[:id])
@@ -47,7 +46,6 @@ class StylesController < ApplicationController
     redirect_to '/styles/'+params[:id]
     # change database and reroute the user
   end
-
 
   # delete /styles/ID
   def destroy
@@ -58,9 +56,23 @@ class StylesController < ApplicationController
     redirect_to '/styles'
   end
 
+  def showalbum
+    @styles = Style.where(user_id: current_user.id)
+    render :showalbum
+  end
+
+  def showfavourites
+    # find the liked styles for this user
+    # @styles = Style.includes(:likes).where('likes.user_id = ?', current_user.id)
+
+    @styles =  Style.includes(:likes).where("likes.user_id = ?", current_user.id).references(:likes)
 
 
+    render :showfavourites
 
+    # Style.joins( :likes => :style )
+    #           .where( :likes => {:user_id => current_user.id})
 
+  end
 
 end
