@@ -1,0 +1,43 @@
+.edit-wrapper, .new-wrapper{
+  background-color: darkgrey;
+}
+
+.new-st-input, .edit-st-input {
+  background-color: #fff;
+  font-family: Roboto;
+  font-size: 15px;
+  font-weight: 300;
+  margin-left: 12px;
+  padding: 0 11px 0 13px;
+  text-overflow: ellipsis;
+  width: 300px;
+  height: 30px;
+  text-align: center;
+  margin-bottom: 10px;
+  border: 2px solid red;
+}
+
+.edit-st-input:focus{
+  border-color: #4d90fe;
+}
+
+.new-st-input:focus{
+  border-color: #4d90fe;
+}
+
+
+#new-edit-btn {
+    background-color: tomato;
+    border: 1px solid red;
+    border-radius: 40px;
+    height: 80px;
+    width: 80px;
+    font-size: 20px;
+    color: white;
+    margin-top: 10px;
+    margin-bottom: 50px;
+}
+
+#new-edit-btn:hover {
+  background-color: #8b0000;
+}
