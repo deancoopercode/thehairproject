@@ -33,9 +33,17 @@ class StylesController < ApplicationController
     # show the correct view for viewing a single style, and also a form for changing the details
   end
 
+  def edit
+    @style = Style.find(params[:id])
+  end
+
 
   # patch/put /styles/ID
   def update
+    @style = Style.find(params[:id])
+    @style.update(studioname: params[:studioname], studiowebsiteurl: params[:studiowebsiteurl], hairdressername: params[:hairdressername], hairpicfront: params[:hairpicfront], hairpicback: params[:hairpicback], hairpicside: params[:hairpicside], price: params[:price], rating: params[:rating], tag: params[:tag])
+    @style.save
+    redirect_to '/show'
     # change database and reroute the user
   end
 
