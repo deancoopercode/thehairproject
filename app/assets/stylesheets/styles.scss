@@ -9,11 +9,18 @@ html {
   margin : 0;
 }
 
+.wrapper {
+  max-width: 1000px;
+  margin: 0 auto;
+
+}
+
 #video_holder {
   z-index  : 0;
   position : relative;
   width    : 100%;
-  height   : 700px;
+  height   : 450px;
+  overflow: hidden;
   top      : 0px;
 }
 
@@ -21,6 +28,9 @@ video#bgvid {
   z-index  : -100;
   position : relative;
   width    : 100%;
+  // -ms-transform     : translateX(10%);
+  // -webkit-transform : translateX(10%);
+  // transform         : translateX(10%);
 }
 
 .ui-style {
