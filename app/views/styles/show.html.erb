@@ -28,11 +28,18 @@
       </ul>
     </div>
 
-  <a href="/styles/<%=@style.id%>/edit">Edit</a>
 
-    <div class="map">
 
-    </div>
+      <div id = "salonLocation">
+          <h4>Coordinates: </h4>
+          <h4 id = "map-lat" ></h4>
+          <h4 id = "map-lng" ></h4>
+        <div id="map"></div>
+      </div>
+
+
+      <a href="/styles/<%=@style.id%>/edit">Edit</a>
+
 
     <form action="/styles/<%= @style.id %>" method="post">
       <input type="hidden" name="_method" value="delete">
@@ -75,3 +82,7 @@
   </div>
 
 </div>
+
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC-_tjRXvZwDBMsFKx2He46Jv3MBw-_oT0&libraries=places&callback=initMap"
+        async defer></script>
