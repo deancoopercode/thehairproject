@@ -15,34 +15,48 @@
 
     <header>
 
-      <div class = "nav_bar">
+      <div class = "main-nav_bar">
 
-        <% if logged_in? %>
-          <div id="currentlyLoggedInDiv">
-            <span id="loggedinHeader">Hi there <%= current_user.name %> </span>
+        <ul>
 
-            <form action="/session" method="post">
-              <input type="hidden" name="_method" value="delete">
-              <button>Logout</button>
-            </form>
+            <% if logged_in? %>
+
+                <div id="currentLginDiv">
+                  <li><span id="loggedinHeader">Hi there <%= current_user.name %> </span></li>
+                  <form action="/session" method="post">
+                    <input type="hidden" name="_method" value="delete">
+                    <li><button>Logout</button></li>
+                  </form>
+
+                  <li><a href="/styles/album">my album</a></li>
+                  <li><a href="/styles/favourites">my favourites</a></li>
+                  <li><a href="/styles/new">add new style</a></li>
+                </div>
+
+            <% else %>
+
+                <div id="currentlyLoggedOutDiv">
+                  <form action="/session" method="post">
+                  <li><input type="text" name="email" placeholder="enter email"></li>
+                  <li><input type="password" name="password" placeholder="enter password"></li>
+
+                  <button>Login</button>
+                  <li><a id="signupLink" href="/users/new">Sign up</a></li>
+                  </form>
+                </div>
+
+            <% end %>
+
+
+          <div class="main-page-logo">
+            <li><a href="/styles">home</a></li>
+            <li><h1>The Hair Project</h1></li>
           </div>
 
-        <% else %>
-          <div id="currentlyLoggedOutDiv">
-            <form action="/session" method="post">
-            <input type="text" name="email" placeholder="enter email">
-            <input type="password" name="password" placeholder="enter password">
-
-            <button>Login</button>
-            <a id="signupLink" href="/users/new">Sign up</a>
-            </form>
-          </div>
-        <% end %>
+        </ul>
 
 
-        <h1>The Hair Project</h1>
-
-      </div>
+    </div>
 
 
     </header>
@@ -53,7 +67,7 @@
     <%= yield %>
 
     <div class = "footer">
-      <footer> The Hair Projekt | Magdalena Bialon | Dean Cooper| Denis The Menace| Melbourne &copy; 2016</footer>
+      <footer> The Hair Projekt | Magdalena Bialon | Dean Cooper | Denis The Menace | Melbourne &copy; 2016</footer>
     </div>
 
   </body>
