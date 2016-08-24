@@ -1,32 +1,18 @@
 
 <div class = "wrapper">
 
-  <div class = "header">
-    <div class = "nav_bar">
-      <!-- <ul>
-        <li>Sign-up</li>
-        <li>Login</li>
-      </ul> -->
-
-    <div class = "brand_name"></div>
-      <h1>The Hair Project</h1>
-    </div>
-
+  <div class = "video_banner">
 
     <div id = "video_holder">
-
       <video playsinline autoplay muted loop id="bgvid">
         <source src="video/slowhair.mp4" type="video/mp4">
       </video>
-
     </div>
-
 
     <div class = "filter">
       <h3>Styles</h3>
     </div>
   </div>
-
 
   <div class="listing">
     <% @styles.each do |style| %>
@@ -34,7 +20,6 @@
           <div class="centered content">
             <%= style.user.name %>
           </div>
-
 
           <div class="image">
             <a href="/styles/<%=style.id%>">
