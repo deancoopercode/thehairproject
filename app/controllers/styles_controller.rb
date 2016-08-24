@@ -1,10 +1,10 @@
 class StylesController < ApplicationController
 
-
+# get /styles
   def index
     @styles = Style.all
   end
-
+# post /styles
   def create
 
     @style = Style.new
@@ -25,6 +25,26 @@ class StylesController < ApplicationController
     end
 
   end
+
+  # get /styles/ID
+  def show
+    @style = Style.find(params[:id])
+
+    # show the correct view for viewing a single style, and also a form for changing the details
+  end
+
+
+  # patch/put /styles/ID
+  def update
+    # change database and reroute the user
+  end
+
+
+  # delete /styles/ID
+  def destroy
+  end
+
+
 
 
 
