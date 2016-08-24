@@ -12,13 +12,15 @@
       <h1>The Hair Project</h1>
     </div>
 
+
     <!-- <div id = "video_holder">
 
-      <video playsinline autoplay muted loop id="bgvid">
+    <video playsinline autoplay muted loop id="bgvid">
         <source src="app/assets/video/slowhair.mp4" type="video/mp4">
       </video>
 
-    </div> -->
+  </div> -->
+
 
     <div class = "filter">
       <h3>Styles</h3>
@@ -35,7 +37,8 @@
 
 
           <div class="image">
-            <img src="<%= style.hairpicfront %>" alt="">
+            <a href="/styles/<%=style.id%>">
+              <img src="<%= style.hairpicfront %>" alt=""></a>
           </div>
           <div class="centered content">
             <span class="like-count"><%= style.likes.count %> Likes</span>
