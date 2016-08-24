@@ -43,7 +43,7 @@ class StylesController < ApplicationController
     @style = Style.find(params[:id])
     @style.update(studioname: params[:studioname], studiowebsiteurl: params[:studiowebsiteurl], hairdressername: params[:hairdressername], hairpicfront: params[:hairpicfront], hairpicback: params[:hairpicback], hairpicside: params[:hairpicside], price: params[:price], rating: params[:rating], tag: params[:tag])
     @style.save
-    redirect_to '/show'
+    redirect_to '/styles/'+params[:id]
     # change database and reroute the user
   end
 
