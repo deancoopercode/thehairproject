@@ -1,40 +1,46 @@
 
-<div class = "wrapper">
+<div class = "video_banner">
 
-  <div class = "video_banner">
-
-    <div id = "video_holder">
-      <video playsinline autoplay muted loop id="bgvid">
-        <source src="video/slowhair.mp4" type="video/mp4">
-      </video>
-    </div>
-
-    <div class = "filter">
-      <h3>Styles</h3>
-    </div>
+  <div id = "video_holder">
+    <video playsinline autoplay muted loop id="bgvid">
+      <source src="video/slowhair.mp4" type="video/mp4">
+    </video>
   </div>
 
-  <div class="listing">
-    <% @styles.each do |style| %>
-        <div class="ui-style" data-id="<%= style.id %>">
-          <div class="centered content">
-            <%= style.user.name %>
-          </div>
-
-          <div class="image">
-            <a href="/styles/<%=style.id%>">
-              <img src="<%= style.hairpicfront %>" alt=""></a>
-          </div>
-          <div class="centered content">
-            <span class="like-count"><%= style.likes.count %> Likes</span>
-            <span class="star right js-like">Like &#9733;</span>
-          </div>
-        </div>
-    <% end %>
-
-    </div>
+  <div class = "filter">
+    <ul>
+      <li class="tags"><img src="images/undercut.png" alt=""><p>Undercut</p></li>
+      <li class="tags"><img src="images/fade.png" alt=""><p>Fade</p></li>
+      <li class="tags"><img src="images/short-back-sides.png" alt=""><p>Short Back Sides</p></li>
+      <li class="tags"><img src="images/side-part.png" alt=""><p>Side Part</p></li>
+      <li class="tags"><img src="images/haircut.png" alt=""><p>Haircut</p></li>
+      <li class="tags"><img src="images/hairstyling.png" alt=""><p>Hairstyling</p></li>
+      <li class="tags"><img src="images/hair-color.png" alt=""><p>Hair Colour</p></li>
+      <li class="tags"><img src="images/other.png" alt=""><p>Other</p></li>
+    </ul>
   </div>
 
+</div>
 
+<div class="listing_holder">
+
+  <% @styles.each do |style| %>
+    <div class="listing" data-id="<%= style.id %>">
+      <div class="image">
+        <a href="/styles/<%=style.id%>">
+          <img src="<%= style.hairpicfront %>" alt="">
+        </a>
+      </div>
+      <div class="centered content">
+        <% if style.likes.count == 1 %>
+          <span class="like-count"><%= style.likes.count %> Like</span>
+        <% end %>
+        <% if style.likes.count > 1 %>
+          <span class="like-count"><%= style.likes.count %> Likes</span>
+        <% end %>
+        <span class="star right js-like">&hearts;</span>
+      </div>
+    </div>
+  <% end %>
 
 </div>

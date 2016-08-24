@@ -14,7 +14,7 @@ $('document').ready(function(){
     console.log('liking a style');
     // debugger
 
-    var $styleDiv =  $(event.target).closest('.ui-style');
+    var $styleDiv =  $(event.target).closest('.listing');
     var styleId = $styleDiv.data('id');
     var $likeCountSpan = $styleDiv.find('.like-count');
 

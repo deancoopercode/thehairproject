@@ -4,24 +4,98 @@
 
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-body,
-html {
-  margin : 0;
+// font-family: 'Lobster', cursive;
+
+// font-family: 'Raleway', sans-serif;
+
+// font-family: 'Cinzel', serif;
+
+* {
+  box-sizing : border-box;
+  font-family: 'Raleway', sans-serif;
 }
 
-.wrapper {
-  max-width: 1000px;
-  margin: 0 auto;
+body,
+html {
+  margin : 0
+}
 
+.nav_bar {
+  background-color: #000000;
+  color: white;
+  font-size: 1em;
+  font-family: 'Cinzel', serif;
+  margin: 15px 0px 15px 0px;
+}
+
+.nav-top {
+  text-align: right;
+}
+
+.nav-bottom {
+  text-align: right;
+}
+
+.nav-bottom * {
+  height           : 0px;
+  // padding          : 10px 20px 0px 20px;
+  color            : white;
+  border-top       : 0px;
+  border-right     : 0px;
+  border-bottom    : 4px solid rgba(0, 0, 0, 0);
+  border-left      : 0px;
+  background-color : rgba(255, 255, 255, 0);
+  font-size        : 0.9em;
+  transition       : border-bottom 1.5s;
+}
+
+.nav-bottom > button:hover {
+  border-bottom : 4px solid rgb(250, 255, 255);
+}
+
+.nav-top * {
+  display: inline-block;
+}
+
+.logo {
+  display: inline-flex;
+  width: 44%;
+}
+
+.login_bar {
+  display: inline-block;
+  width: 55%;
+}
+
+h1 {
+  // font-family: 'Lobster', cursive;
+  font-family: 'Cinzel', serif;
+  font-size: 30px;
+  margin : 10px 10px;
+  display: inline-block;
+  color: #F4F4F6;
+  font-weight: lighter;
+  text-align: left;
+  line-height: 60px;
+}
+
+
+// button {
+//   text-decoration: none;
+// }
+
+.wrapper {
+  max-width : 1000px;
+  margin    : 0 auto;
 }
 
 #video_holder {
   z-index  : 0;
   position : relative;
+  top      : 0px;
   width    : 100%;
   height   : 450px;
-  overflow: hidden;
-  top      : 0px;
+  overflow : hidden;
 }
 
 video#bgvid {
@@ -31,11 +105,6 @@ video#bgvid {
   // -ms-transform     : translateX(10%);
   // -webkit-transform : translateX(10%);
   // transform         : translateX(10%);
-}
-
-.ui-style {
-  width : 33.33%;
-  position : relative;
 }
 
 // Deans below
@@ -66,22 +135,30 @@ a {
   float : right;
 }
 
-.ui-style {
-  display          : inline-block;
-  width            : 24%;
-  margin           : 0.5%;
-  border-radius    : 10px;
-  background-color : lightblue;
-  vertical-align   : top;
-}
-
-.listing {
+.listing-holder {
   display   : flex;
+  width     : 100%;
   flex-wrap : wrap;
 }
 
+.listing {
+  display          : inline-block;
+  width            : 30%;
+  margin           : 1.5%;
+  color            : white;
+  background-color : black;
+  vertical-align   : top;
+  font-family      : 'Cinzel',
+                     serif;
+  font-size        : 0.8em;
+  font-weight      : 400;
+}
+
 .centered {
-  line-height : 2em;
+  padding        : 5px 15px 8px 15px;
+  text-align     : left;
+  vertical-align : middle;
+  line-height    : 1.5em;
 }
 
 h4 {
@@ -102,4 +179,54 @@ h4 {
   opacity : 1;
   cursor  : pointer;
   /* display: block; */
+}
+
+.filter {
+  margin-top       : 15px;
+  padding          : 5px;
+  background-color : #9999A1;
+  text-align       : left;
+  text-decoration  : none;
+}
+
+.filter > ul {
+  padding-left: 20px;
+  padding-right: 0px;
+  display: inline-block;
+}
+
+.ul {
+  margin     : 0px;
+  padding    : 10px;
+  list-style : none;
+}
+
+.tags {
+  display          : inline-block;
+  padding-right    : 20px;
+  border-radius    : 20px;
+  background-color : #E6E6E9;
+  text-align       : left;
+  transition       : 0.5s;
+  cursor           : pointer;
+  // border-bottom: 1px solid #adadb4;
+}
+
+.tags:hover {
+  background-color : white;
+}
+
+.tags > img {
+  height         : 30px;
+  float          : left;
+  vertical-align : top;
+}
+
+.tags > p {
+  float          : left;
+  margin         : 0px;
+  padding        : 0px 0px 0px 10px;
+  vertical-align : middle;
+  font-size      : 0.8em;
+  line-height    : 30px;
 }
