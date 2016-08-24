@@ -26,7 +26,7 @@
 
               <% if logged_in? %>
                 <div id="currentlyLoggedInDiv">
-                  <span id="loggedinHeader">Hi there <%= current_user.name %>! </span>
+                  <span id="loggedinHeader">Hi there <%= current_user.name %> </span>
                 </div>
                 <form action="/session" method="post">
                   <input type="hidden" name="_method" value="delete">
@@ -44,6 +44,7 @@
               <% end %>
 
             </div>
+            <!-- <hr> -->
             <div class="nav-bottom">
               <form action="" method="">
                 <button>Home</button>
@@ -51,10 +52,10 @@
               <form action="" method="">
                 <button>New Post</button>
               </form>
-              <form action="" method="">
+              <form action="" method="" id="top-line">
                 <button>My Album</button>
               </form>
-              <form action="" method="">
+              <form action="" method="" id="top-line">
                 <button>My Favourites</button>
               </form>
 
@@ -67,7 +68,7 @@
       <%= yield %>
 
       <div class = "footer">
-        <footer> The Hair Projekt | Magdalena Bialon | Dean Cooper | Denis The Menace | Melbourne &copy; 2016</footer>
+        <p>The Hair Projekt | Magdalena Bialon | Dean Cooper | Denis The Menace | Melbourne &copy; 2016</p>
       </div>
 
     </div>

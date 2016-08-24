@@ -13,11 +13,13 @@
 * {
   box-sizing : border-box;
   font-family: 'Raleway', sans-serif;
+  color: white;
 }
 
 body,
 html {
-  margin : 0
+  margin : 0;
+  background-color: black;
 }
 
 .nav_bar {
@@ -30,41 +32,79 @@ html {
 
 .nav-top {
   text-align: right;
+  font-family: 'Cinzel', serif;
 }
 
 .nav-bottom {
   text-align: right;
 }
 
-.nav-bottom * {
+.nav-bottom form {
+  font-family: 'Cinzel', serif;
   height           : 0px;
   // padding          : 10px 20px 0px 20px;
   color            : white;
-  border-top       : 0px;
-  border-right     : 0px;
-  border-bottom    : 4px solid rgba(0, 0, 0, 0);
-  border-left      : 0px;
-  background-color : rgba(255, 255, 255, 0);
+  height: 40px;
+  border: 0px;
   font-size        : 0.9em;
-  transition       : border-bottom 1.5s;
+  // transition       : border-bottom 1.5s;
+  margin: 0;
 }
 
-.nav-bottom > button:hover {
-  border-bottom : 4px solid rgb(250, 255, 255);
+.nav-bottom form button {
+  font-family: 'Cinzel', serif;
+  vertical-align: middle;
+  background-color: black;
+  height: 100%;
+  color: white;
+  border: 0px;
+  font-size: 0.9em;
+
+
+}
+
+// #top-line {
+//   border-top: 1px solid white;
+// }
+
+.nav-bottom form button:hover {
+  background-color: rgba(40, 40, 40, 1);
 }
 
 .nav-top * {
   display: inline-block;
+  font-family: 'Cinzel', serif;
+  line-height: 40px;
+  vertical-align: middle;
+  font-size: 0.9em;
+  // border-bottom: 1px solid white;
+}
+
+.nav-top button {
+  background-color: black;
+  color: white;
+  border: 0px;
+}
+
+hr {
+margin: 0px;
+padding: 0px;
+opacity: 0.2;
+width: 30%;
+right: 0px;
+display: absolute;
 }
 
 .logo {
   display: inline-flex;
   width: 44%;
+  vertical-align: top;
 }
 
 .login_bar {
   display: inline-block;
   width: 55%;
+  position: relative;
 }
 
 h1 {
@@ -184,15 +224,17 @@ h4 {
 .filter {
   margin-top       : 15px;
   padding          : 5px;
-  background-color : #9999A1;
+  background-color : rgb(40,40,40);
   text-align       : left;
   text-decoration  : none;
+  color: black;
 }
 
 .filter > ul {
   padding-left: 20px;
   padding-right: 0px;
   display: inline-block;
+  color: black;
 }
 
 .ul {
@@ -229,4 +271,21 @@ h4 {
   vertical-align : middle;
   font-size      : 0.8em;
   line-height    : 30px;
+  color: black;
+}
+
+.footer {
+  background-color: black;
+  color: white;
+  padding: 15px;
+  font-size: 0.8em;
+  font-family: 'Cinzel', serif;
+  margin-bottom: 20px;
+
+}
+
+.footer > p {
+  padding: 0;
+  font-family: 'Cinzel', serif;
+
 }
