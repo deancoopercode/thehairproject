@@ -11,9 +11,9 @@
       <img src="<%=@style.hairpicback%>" alt="">
     </div>
 
-    <div class="pic3">
+    <!-- <div class="pic3">
       <img src="<%=@style.hairpicside%>" alt="">
-    </div>
+    </div> -->
   </div>
 
   <div class="right_container">
@@ -30,12 +30,93 @@
 
 
 
-      <div id = "salonLocation">
+
+    <style>
+          html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+          }
+          #mapDis {
+            height: 300px;;
+          }
+          #floating-panel {
+            /*position: absolute;*/
+            /*top: 10px;
+            left: 25%;
+            z-index: 5;*/
+            background-color: #fff;
+            padding: 5px;
+            border: 1px solid #999;
+            text-align: center;
+            font-family: 'Roboto','sans-serif';
+            line-height: 30px;
+            padding-left: 10px;
+          }
+        </style>
+
+
+
+
+    <div id="floating-panel">
+    <b>Mode of Travel: </b>
+    <select id="mode">
+      <option value="DRIVING">Driving</option>
+      <option value="WALKING">Walking</option>
+      <option value="BICYCLING">Bicycling</option>
+      <option value="TRANSIT">Transit</option>
+    </select>
+    </div>
+    <div id="mapDis"></div>
+    <script>
+      function initMap() {
+        var directionsDisplay = new google.maps.DirectionsRenderer;
+        var directionsService = new google.maps.DirectionsService;
+        var mapDis = new google.maps.Map(document.getElementById('mapDis'), {
+          zoom: 14,
+          center: {lat: 37.77, lng: -122.447}
+        });
+        directionsDisplay.setMap(mapDis);
+
+        calculateAndDisplayRoute(directionsService, directionsDisplay);
+        document.getElementById('mode').addEventListener('change', function() {
+          calculateAndDisplayRoute(directionsService, directionsDisplay);
+        });
+      }
+
+      function calculateAndDisplayRoute(directionsService, directionsDisplay) {
+        var selectedMode = document.getElementById('mode').value;
+        directionsService.route({
+          origin: {lat: -37.8136, lng: 144.9631},  // Haight.
+          destination: {lat: -37.8156, lng: 144.9631},  // Ocean Beach.
+          // Note that Javascript allows us to access the constant
+          // using square brackets and a string value as its
+          // "property."
+          travelMode: google.maps.TravelMode[selectedMode]
+        }, function(response, status) {
+          if (status == 'OK') {
+            directionsDisplay.setDirections(response);
+          } else {
+            window.alert('Directions request failed due to ' + status);
+          }
+        });
+      }
+    </script>
+
+
+
+
+      <!-- <div id = "salonLocation">
+
           <h4>Coordinates: </h4>
-          <h4 id = "map-lat" ></h4>
+           <h4 id = "map-lat" ></h4>
           <h4 id = "map-lng" ></h4>
-        <div id="map"></div>
-      </div>
+          <div id="map"></div>
+          <br>
+          <img class = "map" src="https://maps.googleapis.com/maps/api/staticmap?center=Melbourne&zoom=12&size=250x250&style=feature:road.local|element:labels|color:0xffffff">
+          <img class = "map" src="https://www.google.com/maps/embed/v1/directions&&origin=Oslo+Norway&destination=Telemark+Norway&avoid=tolls|highways">
+
+      </div> -->
 
 
       <a href="/styles/<%=@style.id%>/edit">Edit</a>

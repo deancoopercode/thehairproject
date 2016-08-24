@@ -63,11 +63,11 @@ function initMap() {
       // console.log(place.name);
       // console.log(marker.getPosition().lat());
       // console.log(marker.getPosition().lng());
-      var latCoordinate = marker.getPosition().lat();
-      var lngCoordinate = marker.getPosition().lng();
+      // var latCoordinate = marker.getPosition().lat();
+      // var lngCoordinate = marker.getPosition().lng();
 
-      $('#map-lat').html(latCoordinate);
-      $('#map-lng').html(lngCoordinate);
+      // $('#map-lat').text(latCoordinate);
+      // $('#map-lng').text(lngCoordinate);
 
 
       $('#studio_location').val(place.name);
