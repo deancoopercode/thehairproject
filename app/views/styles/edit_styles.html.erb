@@ -1,38 +1,32 @@
-<!-- <form action="/styles/<%= @style.id %>" method="post"> -->
-
+<form action="/styles/<%= @style.id %>" method="post">
   <input type="hidden" name="_method" value="put">
 
-  <label for="image_url">Image 1 url</label>
-  <input type="text" name=image_url value="<%= @style.image_url %>">
 
-  <label for="image_url">Image 2 url</label>
-  <input type="text" name=image_url value="<%= @style.image_url %>">
+  <input type="text" name = "hairdressername" placeholder="enter hairdresser name" value="<%= ??? %>">
 
-  <label for="image_url">Image 3 url</label>
-  <input type="text" name=image_url value="<%= @style.image_url %>">
+  <input type="text" name = "hairpicfront" placeholder="enter pic front" value="<%= @style.image_url %>">
 
-  <label for="description">Description</label>
-  <textarea name="description" rows="5" cols="30" value="<%= @style.description %>"></textarea>
+  <input type="text" name = "hairpicback" placeholder="enter pic back" value="<%= @style.image_url %>">
 
-  <label for="price">Price</label>
-  <input type="text" name=price value="<%= ??? %>">
+  <input type="text" name = "hairpicside" placeholder="enter pic" value="<%= @style.image_url %>">
 
-  <label for="location">Location</label>
-  <input type="text" name=location value="<%= ??? %>">
+  <input type="text" name = "price" placeholder = "enter price" value="<%= ??? %>">
 
-  <label for="hairstylist_name">Hairstylist Name</label>
-  <input type="text" name=hairstylistname value="<%= ??? %>">
+  <input type="text" name = "rating" placeholder = "rate experience 1 - 5" value="<%= ??? .url %>">
 
-  <label for="url">Website/Social Media Link</label>
-  <input type="text" name="url" value="<%= ??? .url %>">
+  <input type="text" name = "tag" placeholder = "tags: MEN: undercut / fade / sidepart / short back and sides // FEM: cut / colour / styling " value="<%= ??? %>">
+
+  <input type="text" name = "studioname" placeholder="enter studio name" size="50" id="pac-input" class="controls" value="<%= ??? .url %>">
+
+  <input type="text" name = "studiowebsiteurl" placeholder="enter website" value="<%= ??? .url %>">
 
   <button>Update</button>
 
-<!-- </form> -->
+</form>
 
-<!-- <form action="/styles/<%= @style.id %>" method="post"> -->
+<form action="/styles/<%= @style.id %>" method="post">
 
   <input type="hidden" name="_method" value="delete">
   <button>Delete post</button>
 
-<!-- </form> -->
+</form>
