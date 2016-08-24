@@ -7,7 +7,7 @@ height: 100%;
 
 #map {
 height: 300px;
-width: 300px;
+width: 900px;
 text-align: center;
 margin: 0 auto;
 }
@@ -60,13 +60,15 @@ margin: 0 auto;
 
 
 // =================================DISTANCE MAP FOR SHOW PAGE
-.distanceMap{
+.distanceMap {
   width: 900px;
 }
+
 #mapDis {
   height: 350px;
   width: 100%;
 }
+
 #floating-panel {
   /*position: absolute;*/
   /*top: 10px;
