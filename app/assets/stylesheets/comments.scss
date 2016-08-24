@@ -1,3 +1,81 @@
-// Place all the styles related to the comments controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+* {
+  box-sizing: border-box;
+}
+
+.commentsheader {
+  background-color: #dee3e7;
+  color: #555;
+  font-size: 0.8em;
+  border: solid 1px #cfd6dc;
+  border-top-color: #fcfcfc;
+  border-bottom-color: #b2bdc7;
+  width: 100%;
+  float: left;
+  border-bottom: 1px solid grey;
+  padding: 5px;
+
+}
+
+.userName {
+  vertical-align: top;
+  float: right;
+}
+
+#newCommentText{
+  width: 90%;
+  left: 0;
+  height: 30px;
+  font-size: 0.85em;
+}
+
+.clearfix {
+    overflow: auto;
+}
+
+#commentsLabel {
+  vertical-align: top;
+}
+
+#commentText {
+  height: 100px;
+}
+
+form {
+  display: inline-block;
+}
+
+.spanSmall {
+  width: 40%;
+  float: left;
+  height: 100px;
+}
+
+.commentsSection {
+  background-color: white;
+}
+
+.commentsContainer {
+  margin-left: 50px;
+  background-color: #f4f4f4;
+  border: 1px solid gray;
+  margin: 5px auto;
+  width: 95%;
+}
+
+#newCommentsForm {
+  width: 100%;
+}
+
+.newCommentContainer {
+  margin: 10px auto;
+  width: 95%;
+  border-radius: 10px;
+}
+
+.postContainer {
+    background-color: white;
+    margin: 20px auto;
+    margin-bottom: 50px;
+    width: 80%;
+    border: 1px solid black;
+}

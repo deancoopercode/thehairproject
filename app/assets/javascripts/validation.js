@@ -12,7 +12,6 @@ function validateSubmitSignupForm() {
         missingFields += "\nEmail";
     }
 
-
     if (document.getElementById("password").value == "") {
         missingFields += "\nPassword";
     }
