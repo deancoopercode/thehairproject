@@ -36,6 +36,14 @@
 
     </div>
 
+
+    <form action="/styles/<%= @style.id %>" method="post">
+
+      <input type="hidden" name="_method" value="delete">
+      <button>Delete post</button>
+
+    </form>
+
   </div>
 
 </div>

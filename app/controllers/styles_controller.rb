@@ -17,9 +17,10 @@ class StylesController < ApplicationController
     @style.price = params[:price]
     @style.rating = params[:rating]
     @style.tag = params[:tag]
+    @style.user_id = current_user.id
 
     if @style.save
-      redirect_to '/styles'   #redirect go to routes
+      redirect_to "/styles/#{@style.id}"   #redirect go to routes
     else
       render :index           #erb display a template
     end
@@ -29,7 +30,7 @@ class StylesController < ApplicationController
   # get /styles/ID
   def show
     @style = Style.find(params[:id])
-
+    @comments = Comment.all
     # show the correct view for viewing a single style, and also a form for changing the details
   end
 
@@ -50,6 +51,11 @@ class StylesController < ApplicationController
 
   # delete /styles/ID
   def destroy
+    @style = Style.find(params[:id])
+    @style.likes.destroy_all
+    @style.comments.destroy_all
+    @style.destroy
+    redirect_to '/styles'
   end
 
 
