@@ -1,28 +1,31 @@
 
+<div class="edit-wrapper">
 
     <form action="/styles/<%= @style.id %>" method="post">
       <input type="hidden" name="_method" value="put">
       <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
 
 
-      <input type="text" name = "hairdressername" placeholder="enter hairdresser name" value="<%=@style.hairdressername%>">
-      <input type="text" name = "hairpicfront" placeholder="enter pic front" value="<%= @style.hairpicfront %>">
-      <input type="text" name = "hairpicback" placeholder="enter pic back" value="<%= @style.hairpicback %>">
-      <input type="text" name = "hairpicside" placeholder="enter pic" value="<%= @style.hairpicside %>">
-      <input type="text" name = "price" placeholder = "enter price" value="<%= @style.price %>">
-      <input type="text" name = "rating" placeholder = "rate experience 1 - 5" value="<%= @style.rating %>">
-      <input type="text" name = "tag" placeholder = "tags: MEN: undercut / fade / sidepart / short back and sides // FEM: cut / colour / styling " value="<%= @style.tag %>">
-      <input type="text" name = "studiowebsiteurl" placeholder="enter website" value="<%= @style.studiowebsiteurl %>">
+      <input class = "edit-st-input" type="text" name = "hairdressername" placeholder="enter hairdresser name" value="<%=@style.hairdressername%>">
+      <input class = "edit-st-input" type="text" name = "hairpicfront" placeholder="enter pic front" value="<%= @style.hairpicfront %>">
+      <input class = "edit-st-input" type="text" name = "hairpicback" placeholder="enter pic back" value="<%= @style.hairpicback %>">
+      <input class = "edit-st-input" type="text" name = "hairpicside" placeholder="enter pic" value="<%= @style.hairpicside %>">
+      <input class = "edit-st-input" type="text" name = "price" placeholder = "enter price" value="<%= @style.price %>">
+      <input class = "edit-st-input" type="text" name = "rating" placeholder = "rate experience 1 - 5" value="<%= @style.rating %>">
+      <input class = "edit-st-input" type="text" name = "tag" placeholder = "tags: MEN: undercut / fade / sidepart / short back and sides // FEM: cut / colour / styling " value="<%= @style.tag %>">
+      <input class = "edit-st-input" type="text" name = "studiowebsiteurl" placeholder="enter website" value="<%= @style.studiowebsiteurl %>">
 
       <input type="hidden" name="studioname" id="studio_location" value="<%= @style.studioname %>">
-      <input type="text" name = "studioname" placeholder="enter studio name" size="50" id="pac-input" class="controls" value="<%= @style.studioname %>">
+      <input class = "edit-st-input" type="text" name = "studioname" placeholder="enter studio name" size="50" id="pac-input" class="controls" value="<%= @style.studioname %>">
 
-      <button>Update</button>
+      <button id = "new-edit-btn">update</button>
 
     </form>
 
 
     <div id="map"></div>
+
+</div>
 
 
 
