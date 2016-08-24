@@ -20,7 +20,7 @@ $('document').ready(function(){
 
     $.ajax({
       url: '/likes',
-      data: { style_id: styleId, user_id: 42 },
+      data: { style_id: styleId },
       method: 'post'
     }).done(function(response) {
       console.log(response);
