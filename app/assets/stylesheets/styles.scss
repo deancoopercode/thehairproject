@@ -1,91 +1,98 @@
 // Place all the styles related to the styles controller here.
+
 // They will automatically be included in application.css.
+
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-body, html {
-  margin: 0;
-}
-
-.nav_bar {
-  background-color: rgb(249, 71, 153);
-  z-index: 90;
-}
-
-.brand_name {
-  background-color: rgb(136, 16, 106)
+body,
+html {
+  margin : 0;
 }
 
 #video_holder {
   z-index  : 0;
   position : relative;
-  // top      : 0px;
   width    : 100%;
-  height   : 700px;;
-  // overflow : hidden;
+  height   : 700px;
+  // top      : 0px;
 }
 
 video#bgvid {
-  z-index           : -100;
-  position          : absolute;
-  width             : 100%;
-
-}
-//Deans below
-
-.avatar {
-  width: 2em;
-  height: 2em;
-  border-radius: 100%; /* same as 2em but less to worry about */
-  display: inline-block;
-  vertical-align: middle;
-  /*these 2 go together - without this it was having spaces in the bottom, and DT wasnt centered*/
-}
-
-a {
-  color: darkblue;
-  text-decoration: underline;
-}
-.content {
-  padding: .7em;
-}
-
-.right {
-  float: right;
-}
-
-.ui-style {
-  width: 24%;
-  background-color: lightblue;
-  display: inline-block;
-  vertical-align: top;
-  margin: 0.5%;
-  border-radius: 10px;
+  z-index  : -100;
+  position : absolute;
+  width    : 100%;
 }
 
 .listing {
-  display: flex;
-  flex-wrap: wrap;
+  background-color : rgb(126, 91, 31);
+}
+
+.ui-style {
+  width : 33.33%;
+}
+
+// Deans below
+
+.avatar {
+  display        : inline-block;
+  width          : 2em;
+  height         : 2em;
+  border-radius  : 100%;
+  vertical-align : middle;
+  /* same as 2em but less to worry about */
+  /*
+  these 2 go together - without this it was having spaces in the bottom, and DT
+  wasnt centered
+  */
+}
+
+a {
+  color           : darkblue;
+  text-decoration : underline;
+}
+
+.content {
+  padding : .7em;
+}
+
+.right {
+  float : right;
+}
+
+.ui-style {
+  display          : inline-block;
+  width            : 24%;
+  margin           : 0.5%;
+  border-radius    : 10px;
+  background-color : lightblue;
+  vertical-align   : top;
+}
+
+.listing {
+  display   : flex;
+  flex-wrap : wrap;
 }
 
 .centered {
-  line-height: 2em;
+  line-height : 2em;
 }
 
 h4 {
-  margin: 0;
-  padding: 0;
+  margin  : 0;
+  padding : 0;
 }
+
 .star {
-  transition: 1s;
+  transition : 1s;
 }
 
 .image img {
-  width: 100%;
+  width : 100%;
 }
 
 .star:hover {
-  /*display: block;*/
-  cursor: pointer;
-  color: red;
-  opacity: 1;
+  color   : red;
+  opacity : 1;
+  cursor  : pointer;
+  /* display: block; */
 }
