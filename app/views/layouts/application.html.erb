@@ -23,14 +23,14 @@
 
                 <div id="currentLginDiv">
                   <li><span id="loggedinHeader">Hi there <%= current_user.name %> </span></li>
-                  <li><a href="/styles/new">add new style</a></li>
-                  <li><a href="/styles/album">my album</a></li>
-                  <li><a href="/styles/favourites">my favourites</a></li>
-
                   <form action="/session" method="post">
                     <input type="hidden" name="_method" value="delete">
                     <li><button>Logout</button></li>
                   </form>
+
+                  <li><a href="/styles/album">my album</a></li>
+                  <li><a href="/styles/favourites">my favourites</a></li>
+                  <li><a href="/styles/new">add new style</a></li>
                 </div>
 
             <% else %>
