@@ -14,21 +14,18 @@ html {
   position : relative;
   width    : 100%;
   height   : 700px;
-  // top      : 0px;
+  top      : 0px;
 }
 
 video#bgvid {
   z-index  : -100;
-  position : absolute;
+  position : relative;
   width    : 100%;
-}
-
-.listing {
-  background-color : rgb(126, 91, 31);
 }
 
 .ui-style {
   width : 33.33%;
+  position : relative;
 }
 
 // Deans below
