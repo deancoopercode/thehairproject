@@ -2,9 +2,12 @@ html, body {
 height: 100%;
 }
 
+
+// ==============================AUTOCOMPLETE MAP FOR NEW AND EDIT PAGE
+
 #map {
 height: 300px;
-width: 35%;
+width: 300px;
 text-align: center;
 margin: 0 auto;
 }
@@ -53,4 +56,28 @@ margin: 0 auto;
 
 #tags-input {
   width: 500px;
+}
+
+
+// =================================DISTANCE MAP FOR SHOW PAGE
+.distanceMap{
+  width: 900px;
+}
+#mapDis {
+  height: 350px;
+  width: 100%;
+}
+#floating-panel {
+  /*position: absolute;*/
+  /*top: 10px;
+  left: 25%;
+  z-index: 5;*/
+  width: 100%;
+  background-color: #fff;
+  padding: 5px;
+  border: 1px solid #999;
+  text-align: center;
+  font-family: 'Roboto','sans-serif';
+  line-height: 30px;
+  padding-left: 10px;
 }
