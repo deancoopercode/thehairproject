@@ -30,7 +30,7 @@ class StylesController < ApplicationController
   # get /styles/ID
   def show
     @style = Style.find(params[:id])
-
+    @comments = Comment.all
     # show the correct view for viewing a single style, and also a form for changing the details
   end
 
