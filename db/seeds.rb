@@ -7,8 +7,8 @@ Style.destroy_all
 User.destroy_all
 
 u1 = User.create({ name: 'dean', password: 'dean', email: 'dean@ga.co', gender: 'M' })
-u2 = User.create({ name: 'denis',password: 'denis', email: 'denis@ga.co', gender: 'M' })
-u3 = User.create({ name: 'magda',password: 'magda', email: 'magda@ga.co', gender: 'F' })
+u2 = User.create({ name: 'denis', password: 'denis', email: 'denis@ga.co', gender: 'M' })
+u3 = User.create({ name: 'magda', password: 'magda', email: 'magda@ga.co', gender: 'F' })
 
   # female front - http://i.imgur.com/RVFAG7y.png
   # female back - http://i.imgur.com/X7aNUPQ.png
@@ -32,7 +32,7 @@ s1 = Style.create ({
   hairpicback: 'http://i.imgur.com/X7aNUPQ.png',
   price: '100',
   rating: '3',
-  user_id: u1.id
+  user_id: u3.id
 })
 s2 = Style.create ({
   tag: 'Cut',
@@ -56,7 +56,7 @@ s3 = Style.create ({
   hairpicback: 'http://i.imgur.com/EUSIERe.png',
   price: '30',
   rating: '2',
-  user_id: u3.id
+  user_id: u1.id
 })
 
 c1 = Comment.create ({
