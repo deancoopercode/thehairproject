@@ -7,6 +7,7 @@
     </video>
   </div>
 
+<<<<<<< HEAD
   <div class = "filter">
     <ul>
       <li class="tags"><img src="images/undercut.png" alt=""><p>Undercut</p></li>
@@ -18,6 +19,26 @@
       <li class="tags"><img src="images/hair-color.png" alt=""><p>Hair Colour</p></li>
       <li class="tags"><img src="images/other.png" alt=""><p>Other</p></li>
     </ul>
+=======
+  <div class="listing">
+    <% @styles.each do |style| %>
+        <div class="ui-style" data-id="<%= style.id %>">
+          <div class="centered content">
+            <%= style.user.name %>
+          </div>
+
+          <div class="image">
+            <a href="/styles/<%=style.id%>">
+              <img src="<%= style.hairpicfront %>" alt=""></a>
+          </div>
+          <div class="centered content">
+            <span class="like-count"><%= style.likes.count %> Likes</span>
+            <span class="star right js-like">Like &#9733;</span>
+          </div>
+        </div>
+    <% end %>
+    </div>
+>>>>>>> d7e259a21cb775ed2fc38928c4182c55fe6ecdba
   </div>
 
 </div>

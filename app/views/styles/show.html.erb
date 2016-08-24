@@ -11,9 +11,9 @@
       <img src="<%=@style.hairpicback%>" alt="">
     </div>
 
-    <div class="pic3">
+    <!-- <div class="pic3">
       <img src="<%=@style.hairpicside%>" alt="">
-    </div>
+    </div> -->
   </div>
 
   <div class="right_container">
@@ -28,11 +28,40 @@
       </ul>
     </div>
 
-  <a href="/styles/<%=@style.id%>/edit">Edit</a>
 
-    <div class="map">
+
+    <div class="distanceMap">
+
+        <div id="floating-panel">
+          <b>Mode of Travel: </b>
+          <select id="mode">
+            <option value="DRIVING">Driving</option>
+            <option value="WALKING">Walking</option>
+            <option value="BICYCLING">Bicycling</option>
+            <option value="TRANSIT">Transit</option>
+          </select>
+        </div>
+
+        <div id="mapDis"></div>
 
     </div>
+
+
+      <!-- <div id = "salonLocation">
+
+          <h4>Coordinates: </h4>
+           <h4 id = "map-lat" ></h4>
+          <h4 id = "map-lng" ></h4>
+          <div id="map"></div>
+          <br>
+          <img class = "map" src="https://maps.googleapis.com/maps/api/staticmap?center=Melbourne&zoom=12&size=250x250&style=feature:road.local|element:labels|color:0xffffff">
+          <img class = "map" src="https://www.google.com/maps/embed/v1/directions&&origin=Oslo+Norway&destination=Telemark+Norway&avoid=tolls|highways">
+
+      </div> -->
+
+
+      <a href="/styles/<%=@style.id%>/edit">Edit</a>
+
 
     <form action="/styles/<%= @style.id %>" method="post">
       <input type="hidden" name="_method" value="delete">
@@ -75,3 +104,7 @@
   </div>
 
 </div>
+
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC-_tjRXvZwDBMsFKx2He46Jv3MBw-_oT0&libraries=places&callback=disMap"
+        async defer></script>

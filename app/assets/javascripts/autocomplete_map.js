@@ -1,3 +1,6 @@
+var mapLat = document.getElementById('map-lat');
+var mapLong = document.getElementById('map-lng');
+
 function initMap() {
     var map = new google.maps.Map(document.getElementById('map'), {
       center: {lat: -37.8136, lng: 144.9631},
@@ -57,9 +60,16 @@ function initMap() {
       infowindow.setContent('<div><strong>' + place.name + '</strong><br>' + address);
       infowindow.open(map, marker);
 
-      console.log(place.name);
-      console.log(marker.getPosition().lat());
-      console.log(marker.getPosition().lng());
+      // console.log(place.name);
+      // console.log(marker.getPosition().lat());
+      // console.log(marker.getPosition().lng());
+      // var latCoordinate = marker.getPosition().lat();
+      // var lngCoordinate = marker.getPosition().lng();
+
+      // $('#map-lat').text(latCoordinate);
+      // $('#map-lng').text(lngCoordinate);
+
+
       $('#studio_location').val(place.name);
 
 
