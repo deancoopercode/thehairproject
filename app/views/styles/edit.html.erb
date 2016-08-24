@@ -4,23 +4,24 @@
 
 
   <input type="text" name = "hairdressername" placeholder="enter hairdresser name" value="<%=@style.hairdressername%>">
-
   <input type="text" name = "hairpicfront" placeholder="enter pic front" value="<%= @style.hairpicfront %>">
-
   <input type="text" name = "hairpicback" placeholder="enter pic back" value="<%= @style.hairpicback %>">
-
   <input type="text" name = "hairpicside" placeholder="enter pic" value="<%= @style.hairpicside %>">
-
   <input type="text" name = "price" placeholder = "enter price" value="<%= @style.price %>">
-
   <input type="text" name = "rating" placeholder = "rate experience 1 - 5" value="<%= @style.rating %>">
-
   <input type="text" name = "tag" placeholder = "tags: MEN: undercut / fade / sidepart / short back and sides // FEM: cut / colour / styling " value="<%= @style.tag %>">
-
-  <input type="text" name = "studioname" placeholder="enter studio name" size="50" id="pac-input" class="controls" value="<%= @style.studioname %>">
-
   <input type="text" name = "studiowebsiteurl" placeholder="enter website" value="<%= @style.studiowebsiteurl %>">
+
+  <input type="hidden" name="studioname" id="studio_location" value="<%= @style.studioname %>">
+  <input type="text" name = "studioname" placeholder="enter studio name" size="50" id="pac-input" class="controls" value="<%= @style.studioname %>">
 
   <button>Update</button>
 
 </form>
+
+
+<div id="map"></div>
+
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC-_tjRXvZwDBMsFKx2He46Jv3MBw-_oT0&libraries=places&callback=initMap"
+        async defer></script>
