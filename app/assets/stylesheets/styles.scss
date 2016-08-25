@@ -289,14 +289,14 @@ h4 {
   border-radius    : 20px;
   background-color : #E6E6E9;
   text-align       : left;
-  transition       : 0.5s;
+  // transition       : 0.5s;
   cursor           : pointer;
   // border-bottom: 1px solid #adadb4;
 }
 
-.tags:hover {
-  background-color : white;
-}
+// .tags:hover {
+//   background-color : white;
+// }
 
 .tags > img {
   height         : 30px;
