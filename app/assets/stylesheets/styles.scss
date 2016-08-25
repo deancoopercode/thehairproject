@@ -13,6 +13,7 @@
 * {
   box-sizing : border-box;
   font-family: 'Raleway', sans-serif;
+  height: 500px;
 }
 
 body,
@@ -304,6 +305,6 @@ li {
   padding: 0 10px 0 10px;
 }
 
-// .left_container {
-//   width: 69%;
-// }
+.left_container {
+  width: 69%;
+}
