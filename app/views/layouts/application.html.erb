@@ -8,66 +8,69 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/css?family=Cinzel:400,700,900|Lobster|Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
   </head>
 
   <body>
 
+    <div class="wrapper">
 
-    <header>
-
-      <div class = "main-nav_bar">
-
-        <ul>
-
-            <% if logged_in? %>
-
-                <div id="currentLginDiv">
-                  <li><span id="loggedinHeader">Hi there <%= current_user.name %> </span></li>
-                  <form action="/session" method="post">
-                    <input type="hidden" name="_method" value="delete">
-                    <li><button>Logout</button></li>
-                  </form>
-
-                  <li><a href="/styles/album">my album</a></li>
-                  <li><a href="/styles/favourites">my favourites</a></li>
-                  <li><a href="/styles/new">add new style</a></li>
-                </div>
-
-            <% else %>
-
-                <div id="currentlyLoggedOutDiv">
-                  <form action="/session" method="post">
-                  <li><input type="text" name="email" placeholder="enter email"></li>
-                  <li><input type="password" name="password" placeholder="enter password"></li>
-
-                  <button>Login</button>
-                  <li><a id="signupLink" href="/users/new">Sign up</a></li>
-                  </form>
-                </div>
-
-            <% end %>
-
-
-          <div class="main-page-logo">
-            <li><a href="/styles">home</a></li>
-            <li><h1>The Hair Project</h1></li>
+      <header>
+        <div class = "nav_bar">
+          <div class="logo">
+            <h1>The Hair Projekt</h1>
           </div>
+          <div class="login_bar">
+            <div class="nav-top">
 
-        </ul>
+              <% if logged_in? %>
+                <div id="currentlyLoggedInDiv">
+                  <span id="loggedinHeader">Hi there <%= current_user.name %> </span>
+                </div>
+                <form action="/session" method="post">
+                  <input type="hidden" name="_method" value="delete">
+                  <button>Logout</button>
+                </form>
+              <% end %>
 
+              <% if !logged_in? %>
+              <form action="/session" method="post">
+                <input type="text" name="email" placeholder="enter email">
+                <input type="password" name="password" placeholder="enter password">
+                <button>Login</button>
+                <button><a id="signupLink" href="/users/new">Sign Up</a></button>
+              </form>
+              <% end %>
 
-    </div>
+            </div>
+            <!-- <hr> -->
+            <div class="nav-bottom">
+              <form action="" method="">
+                <button>Home</button>
+              </form>
+              <form action="" method="">
+                <button>New Post</button>
+              </form>
+              <form action="" method="" id="top-line">
+                <button>My Album</button>
+              </form>
+              <form action="" method="" id="top-line">
+                <button>My Favourites</button>
+              </form>
 
+            </div>
 
-    </header>
+          </div>
+        </div>
+      </header>
 
+      <%= yield %>
 
+      <div class = "footer">
+        <p>The Hair Projekt | Magdalena Bialon | Dean Cooper | Denis The Menace | Melbourne &copy; 2016</p>
+      </div>
 
-
-    <%= yield %>
-
-    <div class = "footer">
-      <footer> The Hair Projekt | Magdalena Bialon | Dean Cooper | Denis The Menace | Melbourne &copy; 2016</footer>
     </div>
 
   </body>
