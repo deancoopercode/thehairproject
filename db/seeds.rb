@@ -29,7 +29,7 @@ u9 = User.create({ name: 'Tadisha', password: 'tadisha', email: 'tadisa@ga.co', 
   # male back - http://i.imgur.com/EUSIERe.png
 
 s1 = Style.create ({
-  tag: 'Colour',
+  tag: 'colour',
   studioname: 'Billie Jean Hair',
   studiowebsiteurl: 'http://www.billiejeanhair.com/',
   hairdressername: 'Deanne',
@@ -38,11 +38,14 @@ s1 = Style.create ({
   hairpicback: 'http://i.imgur.com/X7aNUPQ.png',
   price: '100',
   rating: '3',
-  user_id: u1.id
+  user_id: u1.id,
+  lat: '-37.8122912',
+  lng: '144.9581958'
+
 })
 
 s2 = Style.create ({
-  tag: 'Cut',
+  tag: 'haircut',
   studioname: 'Rakis on Collins',
   studiowebsiteurl: 'http://www.rakis.com.au/',
   hairdressername: 'Andrew',
@@ -51,11 +54,13 @@ s2 = Style.create ({
   hairpicback: 'http://i.imgur.com/ykTWhFa.png',
   price: '45',
   rating: '4',
-  user_id: u2.id
+  user_id: u2.id,
+  lat: '-37.814938',
+  lng: '144.967652'
 })
 
 s3 = Style.create ({
-  tag: 'Cut',
+  tag: 'haircut',
   studioname: 'Toni & Guy',
   studiowebsiteurl: 'http://www.rakis.com.au/',
   hairdressername: 'Andrew',
@@ -64,25 +69,32 @@ s3 = Style.create ({
   hairpicback: 'http://i.imgur.com/EUSIERe.png',
   price: '30',
   rating: '2',
-  user_id: u3.id
+  user_id: u3.id,
+  lat: '-37.8140934',
+  lng: '144.9676804'
 })
 
 s4 = Style.create ({
-  tag: 'Colour',
-  studioname: 'Sui',
+  tag: 'colour',
+  studioname: 'Edwards and Co.',
   studiowebsiteurl: 'http://www.sui.com.au/',
-  hairdressername: 'Giselle',
+  hairdressername: 'Sui',
   hairpicfront: 'http://i.imgur.com/T0xcvCi.png',
   hairpicside: 'http://i.imgur.com/CXtC4uK.png',
   hairpicback: 'http://i.imgur.com/FQ7xElG.png',
   price: '300',
   rating: '2',
-  user_id: u4.id
+  user_id: u4.id,
+  lat: '-37.810343',
+  lng: '144.97114699999997'
 })
 
+
+
+
 s5 = Style.create ({
-  tag: 'Undercut',
-  studioname: 'The BarberShop',
+  tag: 'undercut',
+  studioname: 'The Melbourne Barber Shop',
   studiowebsiteurl: 'http://www.thebarbershop.com.au/',
   hairdressername: 'Andrew',
   hairpicfront: 'http://i.imgur.com/7Mmmj2b.png',
@@ -90,11 +102,13 @@ s5 = Style.create ({
   hairpicback: 'http://i.imgur.com/EUSIERe.png',
   price: '80',
   rating: '4',
-  user_id: u5.id
+  user_id: u5.id,
+  lat: '-37.807136',
+  lng: '144.9660039'
 })
 
 s6 = Style.create ({
-  tag: 'Fade',
+  tag: 'fade',
   studioname: 'Toni & Guy',
   studiowebsiteurl: 'http://www.rakis.com.au/',
   hairdressername: 'Andrew',
@@ -103,11 +117,13 @@ s6 = Style.create ({
   hairpicback: 'http://i.imgur.com/Qx10ah7.png',
   price: '50',
   rating: '4',
-  user_id: u6.id
+  user_id: u6.id,
+  lat: '-37.8140934',
+  lng: '144.9676804'
 })
 
 s7 = Style.create ({
-  tag: 'Colour',
+  tag: 'colour',
   studioname: 'Toni & Guy',
   studiowebsiteurl: 'http://www.rakis.com.au/',
   hairdressername: 'Melinda',
@@ -116,11 +132,13 @@ s7 = Style.create ({
   hairpicback: 'http://i.imgur.com/n6UB0Xr.png',
   price: '110',
   rating: '5',
-  user_id: u7.id
+  user_id: u7.id,
+  lat: '-37.8140934',
+  lng: '144.9676804'
 })
 
 s8 = Style.create ({
-  tag: 'Cut',
+  tag: 'haircut',
   studioname: 'Toni & Guy',
   studiowebsiteurl: 'http://www.rakis.com.au/',
   hairdressername: 'Andrew',
@@ -129,12 +147,14 @@ s8 = Style.create ({
   hairpicback: 'http://i.imgur.com/4deJoFC.png',
   price: '80',
   rating: '3',
-  user_id: u8.id
+  user_id: u8.id,
+  lat: '-37.8140934',
+  lng: '144.9676804'
 })
 
 s9 = Style.create ({
-  tag: 'Colour',
-  studioname: 'Toni & Guy',
+  tag: 'colour',
+  studioname: 'Yoshiko Hair',
   studiowebsiteurl: 'http://www.rakis.com.au/',
   hairdressername: 'Anthony',
   hairpicfront: 'http://i.imgur.com/cIIoXiD.png',
@@ -142,7 +162,9 @@ s9 = Style.create ({
   hairpicback: 'http://i.imgur.com/OoQn71E.png',
   price: '250',
   rating: '3',
-  user_id: u9.id
+  user_id: u9.id,
+  lat: '-37.8592634',
+  lng: '144.9773182'
 })
 
 c1 = Comment.create ({
