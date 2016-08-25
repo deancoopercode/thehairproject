@@ -60,14 +60,14 @@ function initMap() {
       infowindow.setContent('<div><strong>' + place.name + '</strong><br>' + address);
       infowindow.open(map, marker);
 
-      // console.log(place.name);
-      // console.log(marker.getPosition().lat());
-      // console.log(marker.getPosition().lng());
-      // var latCoordinate = marker.getPosition().lat();
-      // var lngCoordinate = marker.getPosition().lng();
+      console.log(place.name);
+      console.log(marker.getPosition().lat());
+      console.log(marker.getPosition().lng());
+      var latCoordinate = marker.getPosition().lat();
+      var lngCoordinate = marker.getPosition().lng();
 
-      // $('#map-lat').text(latCoordinate);
-      // $('#map-lng').text(lngCoordinate);
+      $('#map-lat').text(<%= %style.lat>);
+      $('#map-lng').text(lngCoordinate);
 
 
       $('#studio_location').val(place.name);
