@@ -1,31 +1,29 @@
 
-
-// $('.listing').on('click', '.star', function(event) {
-//   // console.log( $(event.target).closest('.ui-card').find('h2').text() );
-//   console.log(event.target);
-//   //this - will always be the .star
-//   console.log(this);
-//   // $(event.target).closest('.image').find('.word').html('liked');
-// });
-
 $('document').ready(function(){
 
+  $('#newStyleUl li').on('click', function() {
+
+    //remove all selected classes.
+    $('#newStyleUl li').removeClass().addClass("tags");
+
+    if ($(event.target).closest('li').hasClass( "liSelected" )){
+      $(event.target).closest('li').removeClass().addClass("tags");
+    }
+
+    else {
+      $(event.target).closest('li').removeClass().addClass("liSelected tags");
+    }
 
 
 
 
 
+    var value = $(event.target).closest('li').data('id');
+    console.log($(event.target).closest('li').data('id'));
+    $('#tags-input').val(value);
+  })
 
-
-
-
-
-
-  
-  console.log('doc ready');
   $('.js-like').on('click', function() {
-    console.log('liking a style');
-    // debugger
 
     var $styleDiv =  $(event.target).closest('.listing');
     var styleId = $styleDiv.data('id');

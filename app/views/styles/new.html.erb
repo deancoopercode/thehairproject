@@ -12,8 +12,21 @@
         <input class = "new-st-input" type="text" name = "hairpicside" placeholder="enter pic side">
         <input class = "new-st-input" type="text" name = "price" placeholder = "enter price">
         <input class = "new-st-input" type="text" name = "rating" placeholder = "rate experience 1 - 5">
-        <input class = "new-st-input" type="text" name = "tag" placeholder = "tags: MEN: undercut / fade / sidepart / short back and sides // FEM: cut / colour / styling " id="tags-input">
+        <input class = "new-st-input" type="hidden" name = "tag" id="tags-input">
         <input class = "new-st-input" type="text" name = "studiowebsiteurl" placeholder="enter website">
+
+        <div class = "filter">
+          <ul id="newStyleUl">
+            <li data-id="undercut" class="tags"><%=image_tag("undercut.png")%><p>Undercut</p></li>
+            <li data-id="fade" class="tags"><%=image_tag("fade.png")%><p>Fade</p></li>
+            <li data-id="shortbacksides" class="tags"><%=image_tag("short-back-sides.png")%><p>Short Back Sides</p></li>
+            <li data-id="sidepart" class="tags"><%=image_tag("side-part.png")%><p>Side Part</p></li>
+            <li data-id="haircut" class="tags"><%=image_tag("haircut.png")%><p>Haircut</p></li>
+            <li data-id="hairstyling" class="tags"><%=image_tag("hairstyling.png")%><p>Hairstyling</p></li>
+            <li data-id="haircolor" class="tags"><%=image_tag("hair-color.png")%><p>Hair Colour</p></li>
+            <li data-id="other" class="tags"><%=image_tag("other.png")%><p>Other</p></li>
+          </ul>
+      </div>
 
         <input type="hidden" name="studioname" id="studio_location" value="">
         <input type="hidden" name="lat" id="studio_lat" value="">
