@@ -1,5 +1,4 @@
-var mapLat = document.getElementById('map-lat');
-var mapLong = document.getElementById('map-lng');
+
 
 function initMap() {
     var map = new google.maps.Map(document.getElementById('map'), {
@@ -8,6 +7,9 @@ function initMap() {
     });
     var input = /** @type {!HTMLInputElement} */(
         document.getElementById('pac-input'));
+
+    var studioLat = document.getElementById('studio_lat');
+    var studioLng = document.getElementById('studio_lng');
 
     var types = document.getElementById('type-selector');
     map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
@@ -60,17 +62,27 @@ function initMap() {
       infowindow.setContent('<div><strong>' + place.name + '</strong><br>' + address);
       infowindow.open(map, marker);
 
+
       console.log(place.name);
-      console.log(marker.getPosition().lat());
-      console.log(marker.getPosition().lng());
+      $('#studio_location').val(place.name);
+
+
+
+      // console.log(marker.getPosition().lat());
+      // console.log(marker.getPosition().lng());
       var latCoordinate = marker.getPosition().lat();
       var lngCoordinate = marker.getPosition().lng();
+      console.log(latCoordinate);
+      console.log(lngCoordinate);
 
-      $('#map-lat').text(<%= %style.lat>);
-      $('#map-lng').text(lngCoordinate);
+      $('#studio_lat').val(latCoordinate);
+      $('#studio_lng').val(lngCoordinate);
+      // console.log($('#studio_lat').val(latCoordinate));
 
 
-      $('#studio_location').val(place.name);
+
+
+
 
 
     });

@@ -23,7 +23,7 @@ u3 = User.create({ name: 'magda', password: 'magda', email: 'magda@ga.co', gende
   # male back - http://i.imgur.com/EUSIERe.png
 
 s1 = Style.create ({
-  tag: 'Cut',
+  tag: 'colour',
   studioname: 'Billie Jean Hair',
   studiowebsiteurl: 'http://www.billiejeanhair.com/',
   hairdressername: 'Deanne',

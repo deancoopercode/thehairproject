@@ -11,9 +11,9 @@
       <img src="<%=@style.hairpicback%>" alt="">
     </div>
 
-    <!-- <div class="pic3">
+    <div class="pic3">
       <img src="<%=@style.hairpicside%>" alt="">
-    </div> -->
+    </div>
   </div>
 
   <div class="right_container">
@@ -25,6 +25,11 @@
         <li><%=@style.tag%></li>
         <li><%=@style.studiowebsiteurl%></li>
         <li><%=@style.studioname%></li>
+          <div id = "salonLocation">
+            <li>Coordinates: </li>
+            <li id = "map-lat" ><%= @style.lat %></li>
+            <li id = "map-lng" ><%= @style.lng %></li>
+          </div>
       </ul>
     </div>
 
@@ -47,26 +52,17 @@
     </div>
 
 
-      <div id = "salonLocation" style= "height: 200px">
 
-          <h4>Coordinates: </h4>
-           <h4 id = "map-lat" ></h4>
-          <h4 id = "map-lng" ></h4>
-          <div id="map"></div>
-          <!-- <br>
-          <img class = "map" src="https://maps.googleapis.com/maps/api/staticmap?center=Melbourne&zoom=12&size=250x250&style=feature:road.local|element:labels|color:0xffffff">
-          <img class = "map" src="https://www.google.com/maps/embed/v1/directions&&origin=Oslo+Norway&destination=Telemark+Norway&avoid=tolls|highways"> -->
-
-      </div>
-
-
+    <% if (current_user != nil) && (@style.user.id == current_user.id) %>
       <a href="/styles/<%=@style.id%>/edit">Edit</a>
 
 
-    <form action="/styles/<%= @style.id %>" method="post">
-      <input type="hidden" name="_method" value="delete">
-      <button>Delete post</button>
-    </form>
+      <form action="/styles/<%= @style.id %>" method="post">
+        <input type="hidden" name="_method" value="delete">
+        <button>Delete post</button>
+      </form>
+
+    <% end %>
 
   </div>
 
@@ -74,7 +70,7 @@
       <div class="commentsSection">
           <div class="commentsContainer">
             <div class="commentsheader"><%= comment.user.name %>
-              <% if comment.user.id == current_user.id %>
+              <% if (current_user != nil) && (comment.user.id == current_user.id) %>
                 <form action="/comments/<%= comment['id'] %>" method="post">
                   <input type="hidden" name="_method" value="delete">
                   <input type="hidden" name="style_id" value="<%=@style.id%>">
@@ -92,13 +88,15 @@
       </div>
   <% end %>
 
-    <div class="newCommentContainer">
-      <form id="newCommentsForm" action="/comments" method="post">
-        <input type="hidden" name="style_id" value="<%= @style['id'] %>">
-        <input type="text" name="newCommentText" id="newCommentText" placeholder="Write a comment..">
-        <button>Submit</button>
-      </form>
-    </div>
+    <% if current_user != nil %>
+      <div class="newCommentContainer">
+        <form id="newCommentsForm" action="/comments" method="post">
+          <input type="hidden" name="style_id" value="<%= @style['id'] %>">
+          <input type="text" name="newCommentText" id="newCommentText" placeholder="Write a comment..">
+          <button>Submit</button>
+        </form>
+      </div>
+  <% end %>
 
     <div style="clear: both;"></div>
   </div>
