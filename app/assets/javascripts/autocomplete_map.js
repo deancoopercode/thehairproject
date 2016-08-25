@@ -4,7 +4,8 @@ function initMap() {
     // scrollwheel: false;
     var map = new google.maps.Map(document.getElementById('map'), {
       center: {lat: -37.8136, lng: 144.9631},
-      zoom: 13
+      zoom: 13,
+      scrollwheel: false
     });
     var input = /** @type {!HTMLInputElement} */(
         document.getElementById('pac-input'));
@@ -64,7 +65,7 @@ function initMap() {
       infowindow.open(map, marker);
 
 
-      console.log(place.name);
+      // console.log(place.name);
       $('#studio_location').val(place.name);
 
 
@@ -97,4 +98,7 @@ function initMap() {
     // setupClickListener('changetype-address', ['address']);
     // setupClickListener('changetype-establishment', ['establishment']);
     // setupClickListener('changetype-geocode', ['geocode']);
+
+    // google.maps.setOptions({'scrollwheel': false, 'draggable': false, 'zoomControl': false});
+
   }

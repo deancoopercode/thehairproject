@@ -3,6 +3,9 @@ function disMap() {
   var directionsService = new google.maps.DirectionsService;
   var mapDis = new google.maps.Map(document.getElementById('mapDis'), {
     zoom: 14,
+    // zoomControl: false,
+    // scaleControl: false,
+    scrollwheel: false,
     center: {lat: -37.8136, lng: 144.9631}
   });
   directionsDisplay.setMap(mapDis);
@@ -33,7 +36,3 @@ function calculateAndDisplayRoute(directionsService, directionsDisplay) {
     }
   });
 }
-
-
-// $('#map-lat').text(<%= %style.lat>);
-// $('#map-lng').text(lngCoordinate);
