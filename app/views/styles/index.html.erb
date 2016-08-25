@@ -27,7 +27,7 @@
 
 <div class="listing_holder">
 
-  <% @styles.each do |style| %>
+  <% @top_styles.each do |style| %>
     <div class="listing" data-id="<%= style.id %>">
       <div class="image">
         <a href="/styles/<%=style.id%>">
@@ -35,11 +35,11 @@
         </a>
       </div>
       <div class="centered content">
-        <% if style.likes.count == 1 %>
-          <span class="like-count"><%= style.likes.count %> Like</span>
+        <% if style.likes_count == 1 %>
+          <span class="like-count"><%= style.likes_count %> Like</span>
         <% end %>
-        <% if (style.likes.count == 0) || (style.likes.count > 1) %>
-          <span class="like-count"><%= style.likes.count %> Likes</span>
+        <% if (style.likes_count == 0) || (style.likes_count > 1) %>
+          <span class="like-count"><%= style.likes_count %> Likes</span>
         <% end %>
         <span class="star right js-like">&hearts;</span>
       </div>
