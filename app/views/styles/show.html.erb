@@ -108,7 +108,7 @@
         <form id="newCommentsForm" action="/comments" method="post">
           <input type="hidden" name="style_id" value="<%= @style['id'] %>">
           <input type="text" name="newCommentText" id="newCommentText" placeholder="Write a comment..">
-          <button>Submit</button>
+          <button id = "submit-comment" >Submit</button>
         </form>
       </div>
     <% end %>
