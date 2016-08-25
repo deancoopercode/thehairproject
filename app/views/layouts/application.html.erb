@@ -46,19 +46,12 @@
             </div>
             <!-- <hr> -->
             <div class="nav-bottom">
-              <form action="" method="">
-                <button>home</button>
-              </form>
-              <form action="" method="">
-                <button>new post</button>
-              </form>
-              <form action="" method="" id="top-line">
-                <button>my album</button>
-              </form>
-              <form action="" method="" id="top-line">
-                <button>my favourites</button>
-              </form>
-
+              <ul>
+                <a href="/styles"><li id="top-line">home</li></a>
+                <a href="/styles/new"><li id="top-line">new post</li></a>
+                <a href="/styles/album"><li id="top-line">my album</li></a>
+                <a href="/styles/favourites"><li id="top-line">my favourites</li></a>
+              </ul>
             </div>
 
           </div>
@@ -68,7 +61,7 @@
       <%= yield %>
 
       <div class = "footer">
-        <p>THP | Magdalena Bialon | Dean Cooper | Denis Ng | Melbourne &copy; 2016</p>
+        <p>TheHairProject|<span> Magdalena Bialon | Dean Cooper | Denis Ng | Melbourne &copy; 2016</span></p>
       </div>
 
     </div>
