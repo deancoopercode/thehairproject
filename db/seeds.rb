@@ -76,17 +76,17 @@ s3 = Style.create ({
 
 s4 = Style.create ({
   tag: 'colour',
-  studioname: 'Sui',
+  studioname: 'Edwards and Co.',
   studiowebsiteurl: 'http://www.sui.com.au/',
-  hairdressername: 'Yoshiko Hair',
+  hairdressername: 'Sui',
   hairpicfront: 'http://i.imgur.com/T0xcvCi.png',
   hairpicside: 'http://i.imgur.com/CXtC4uK.png',
   hairpicback: 'http://i.imgur.com/FQ7xElG.png',
   price: '300',
   rating: '2',
   user_id: u4.id,
-  lat: '37.8592634',
-  lng: '144.9773182'
+  lat: '-37.810343',
+  lng: '144.97114699999997'
 })
 
 
@@ -154,7 +154,7 @@ s8 = Style.create ({
 
 s9 = Style.create ({
   tag: 'colour',
-  studioname: 'Toni & Guy',
+  studioname: 'Yoshiko Hair',
   studiowebsiteurl: 'http://www.rakis.com.au/',
   hairdressername: 'Anthony',
   hairpicfront: 'http://i.imgur.com/cIIoXiD.png',
@@ -163,8 +163,8 @@ s9 = Style.create ({
   price: '250',
   rating: '3',
   user_id: u9.id,
-  lat: '-37.8140934',
-  lng: '144.9676804'
+  lat: '-37.8592634',
+  lng: '144.9773182'
 })
 
 c1 = Comment.create ({
