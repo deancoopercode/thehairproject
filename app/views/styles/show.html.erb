@@ -62,17 +62,20 @@
     </div>
 
 
+    <div class="edit-delete-btn">
 
         <% if (current_user != nil) && (@style.user.id == current_user.id) %>
-          <a href="/styles/<%=@style.id%>/edit">Edit</a>
 
+          <a id = "go-to-edit" href="/styles/<%=@style.id%>/edit">edit post</a>
 
           <form action="/styles/<%= @style.id %>" method="post">
             <input type="hidden" name="_method" value="delete">
-            <button>Delete post</button>
+            <button id = "delete-post">delete post</button>
           </form>
 
         <% end %>
+
+    </div>
 
 
 
