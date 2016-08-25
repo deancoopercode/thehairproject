@@ -30,15 +30,15 @@
                 </div>
                 <form action="/session" method="post">
                   <input type="hidden" name="_method" value="delete">
-                  <button>Logout</button>
+                  <button id = "logout">Logout</button>
                 </form>
               <% end %>
 
               <% if !logged_in? %>
               <form action="/session" method="post">
-                <input type="text" name="email" placeholder="enter email">
-                <input type="password" name="password" placeholder="enter password">
-                <button>Login</button>
+                <input id = "login_email" type="text" name="email" placeholder="enter email">
+                <input id = "login_password" type="password" name="password" placeholder="enter password">
+                <button id = "login">Login</button>
                 <button><a id="signupLink" href="/users/new">Sign Up</a></button>
               </form>
               <% end %>
