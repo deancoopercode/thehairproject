@@ -15,9 +15,12 @@ function disMap() {
 
 function calculateAndDisplayRoute(directionsService, directionsDisplay) {
   var selectedMode = document.getElementById('mode').value;
+  console.log($('#map-lat').text())
   directionsService.route({
-    origin: {lat: -37.8136, lng: 144.9631},  // Haight.
-    destination: {lat: -37.8156, lng: 144.9431},  // Ocean Beach.
+    origin: {lat: -37.8185716, lng: 144.9546346},  // melbourne center HARDCODED
+
+    // destination: {lat: -37.8156, lng: 144.9431},  // Hair salon HARDCODED
+    destination: {lat: parseFloat($('#map-lat').text(), 10), lng: parseFloat($('#map-lng').text(), 10)},  // Hair salon.
     // Note that Javascript allows us to access the constant
     // using square brackets and a string value as its
     // "property."
@@ -30,3 +33,7 @@ function calculateAndDisplayRoute(directionsService, directionsDisplay) {
     }
   });
 }
+
+
+// $('#map-lat').text(<%= %style.lat>);
+// $('#map-lng').text(lngCoordinate);

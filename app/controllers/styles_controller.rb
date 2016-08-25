@@ -17,6 +17,8 @@ class StylesController < ApplicationController
     @style.price = params[:price]
     @style.rating = params[:rating]
     @style.tag = params[:tag]
+    @style.lat = params[:lat]
+    @style.lng = params[:lng]
     @style.user_id = current_user.id
 
     if @style.save
@@ -41,7 +43,7 @@ class StylesController < ApplicationController
   # patch/put /styles/ID
   def update
     @style = Style.find(params[:id])
-    @style.update(studioname: params[:studioname], studiowebsiteurl: params[:studiowebsiteurl], hairdressername: params[:hairdressername], hairpicfront: params[:hairpicfront], hairpicback: params[:hairpicback], hairpicside: params[:hairpicside], price: params[:price], rating: params[:rating], tag: params[:tag])
+    @style.update(studioname: params[:studioname], studiowebsiteurl: params[:studiowebsiteurl], hairdressername: params[:hairdressername], hairpicfront: params[:hairpicfront], hairpicback: params[:hairpicback], hairpicside: params[:hairpicside], price: params[:price], rating: params[:rating], tag: params[:tag], lat: params[:lat], lng: params[:lng])
     @style.save
     redirect_to '/styles/'+params[:id]
     # change database and reroute the user
