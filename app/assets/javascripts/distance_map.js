@@ -1,3 +1,7 @@
+// hi there anyone reading the code ;) or CHECKING IT AND MARKING > HARRY
+
+
+
 function disMap() {
   var directionsDisplay = new google.maps.DirectionsRenderer;
   var directionsService = new google.maps.DirectionsService;
@@ -18,7 +22,7 @@ function disMap() {
 
 function calculateAndDisplayRoute(directionsService, directionsDisplay) {
   var selectedMode = document.getElementById('mode').value;
-  console.log($('#map-lat').text())
+  // console.log($('#map-lat').text())
   directionsService.route({
     origin: {lat: -37.818535, lng: 144.958998},  // melbourne Generel Assemb.ly HARDCODED
 

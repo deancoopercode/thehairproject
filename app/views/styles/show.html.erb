@@ -89,7 +89,7 @@
                   <form action="/comments/<%= comment['id'] %>" method="post">
                     <input type="hidden" name="_method" value="delete">
                     <input type="hidden" name="style_id" value="<%=@style.id%>">
-                    <button>Delete</button>
+                    <button id = "delete-comment">Delete comment</button>
                   </form>
                 <% end %>
 
