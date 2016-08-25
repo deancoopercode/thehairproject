@@ -2,7 +2,7 @@
 
 <div class = "show_container">
 
-  <div class="left_container" style="width:400px;">
+  <div class="left_container" style="width:70%"> <!-- undo hard coding -->
     <div id="thumbnail-slider">
         <div class="inner">
             <ul>
@@ -68,27 +68,27 @@
 
   </div>
 
-  <% @style.comments.each do |comment| %>
-      <div class="commentsSection">
-          <div class="commentsContainer">
-            <div class="commentsheader"><%= comment.user.name %>
-              <% if (current_user != nil) && (comment.user.id == current_user.id) %>
-                <form action="/comments/<%= comment['id'] %>" method="post">
-                  <input type="hidden" name="_method" value="delete">
-                  <input type="hidden" name="style_id" value="<%=@style.id%>">
-                  <button>Delete</button>
-                </form>
-              <% end %>
+    <% @style.comments.each do |comment| %>
+        <div class="commentsSection">
+            <div class="commentsContainer">
+              <div class="commentsheader"><%= comment.user.name %>
+                <% if (current_user != nil) && (comment.user.id == current_user.id) %>
+                  <form action="/comments/<%= comment['id'] %>" method="post">
+                    <input type="hidden" name="_method" value="delete">
+                    <input type="hidden" name="style_id" value="<%=@style.id%>">
+                    <button>Delete</button>
+                  </form>
+                <% end %>
 
-              <span class="userName">
-                  <%= comment.created_at.to_formatted_s(:long_ordinal)  %>
-              </span>
+                <span class="userName">
+                    <%= comment.created_at.to_formatted_s(:long_ordinal)  %>
+                </span>
+              </div>
+              <div id="commentText"><%= comment.text %></div>
+              <div style="clear: both;"></div>
             </div>
-            <div id="commentText"><%= comment.text %></div>
-            <div style="clear: both;"></div>
-          </div>
-      </div>
-  <% end %>
+        </div>
+    <% end %>
 
     <% if current_user != nil %>
       <div class="newCommentContainer">
@@ -98,7 +98,7 @@
           <button>Submit</button>
         </form>
       </div>
-  <% end %>
+    <% end %>
 
     <div style="clear: both;"></div>
   </div>
