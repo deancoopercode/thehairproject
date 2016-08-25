@@ -1,16 +1,17 @@
-<form action="/users" onsubmit="return validateSubmitSignupForm()" method="post">
 
-  <label for="">name</label>
-  <input type="text" name="name">
+<div class="signupDiv">
 
-  <label for="">gender</label>
-  <input type="text" name="gender">
+  <form id ="signupForm" action="/users" onsubmit="return validateSubmitSignupForm()" method="post">
 
-  <label for="email">email</label>
-  <input type="text" id="email" name="email">
+    <input class="singin-input" type="text" name="name" placeholder = "enter name">
 
-  <label for="password">password</label>
-  <input type="password" id="password" name="password">
+    <input class="singin-input" type="text" name="gender" placeholder = "enter gender">
 
-  <button>Create New Account</button>
-</form>
+    <input class="singin-input" type="text" id="email" name="email" placeholder = "enter email">
+
+    <input class="singin-input" type="password" id="password" name="password" placeholder = "enter password">
+
+    <button id = "signup-button">Create New Account</button>
+  </form>
+
+</div>
