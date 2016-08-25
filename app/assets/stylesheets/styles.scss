@@ -32,7 +32,6 @@ html {
 
 .nav-top {
   text-align: right;
-  font-family: 'Cinzel', serif;
 }
 
 .nav-bottom {
@@ -40,26 +39,23 @@ html {
 }
 
 .nav-bottom form {
-  font-family: 'Cinzel', serif;
   height           : 0px;
-  // padding          : 10px 20px 0px 20px;
+  padding          : 0px 10px 0px 10px;
   color            : white;
   height: 40px;
   border: 0px;
   font-size        : 0.9em;
-  // transition       : border-bottom 1.5s;
   margin: 0;
 }
 
 .nav-bottom form button {
-  font-family: 'Cinzel', serif;
   vertical-align: middle;
   background-color: black;
   height: 100%;
   color: white;
   border: 0px;
   font-size: 0.9em;
-
+  transition : 0.5s;
 
 }
 
@@ -73,7 +69,6 @@ html {
 
 .nav-top * {
   display: inline-block;
-  font-family: 'Cinzel', serif;
   line-height: 40px;
   vertical-align: middle;
   font-size: 0.9em;
@@ -108,9 +103,8 @@ display: absolute;
 }
 
 h1 {
-  // font-family: 'Lobster', cursive;
   font-family: 'Cinzel', serif;
-  font-size: 30px;
+  font-size: 40px;
   margin : 10px 10px;
   display: inline-block;
   color: #F4F4F6;
@@ -118,11 +112,6 @@ h1 {
   text-align: left;
   line-height: 60px;
 }
-
-
-// button {
-//   text-decoration: none;
-// }
 
 .wrapper {
   max-width : 1000px;
@@ -290,5 +279,5 @@ h4 {
 .footer > p {
   padding: 0;
   font-family: 'Cinzel', serif;
-
+  text-align: center;
 }
