@@ -2,40 +2,48 @@
 
 <div class = "show_container">
 
-  <div class="left_container">
-    <div id="thumbnail-slider">
-        <div class="inner">
-            <ul>
-                <li>
-                    <a class="thumb" href="<%=@style.hairpicfront%>"></a>
-                </li>
-                <li>
-                    <a class="thumb" href="<%=@style.hairpicside%>"></a>
-                </li>
-                <li>
-                    <a class="thumb" href="<%=@style.hairpicback%>"></a>
-                </li>
-            </ul>
-        </div>
-    </div>
-  </div>
+  <div class = "top-pic-des-div">
 
-  <div class="right_container">
-    <div class="table">
-      <ul>
-        <li class>Hairdresser: <%=@style.hairdressername%></li>
-        <li>Price: $ <%=@style.price%></li>
-        <li>Rating: <%=@style.rating%></li>
-        <li>Type of service: <%=@style.tag%></li>
-        <li>Web page: <%=@style.studiowebsiteurl%></li>
-        <li>Name of the studio: <%=@style.studioname%></li>
-          <div id = "salonLocation">
-            <li>Coordinates: </li>
-            <li id = "map-lat" ><%= @style.lat %></li>
-            <li id = "map-lng" ><%= @style.lng %></li>
-          </div>
-      </ul>
+      <div class="left_container">
+        <div id="thumbnail-slider">
+            <div class="inner">
+                <ul>
+                    <li>
+                        <a class="thumb" href="<%=@style.hairpicfront%>"></a>
+                    </li>
+                    <li>
+                        <a class="thumb" href="<%=@style.hairpicside%>"></a>
+                    </li>
+                    <li>
+                        <a class="thumb" href="<%=@style.hairpicback%>"></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+      </div>
+
+      <div class="right_container">
+        <div class="table">
+          <ul>
+            <li class = "description">Hairdresser : <%=@style.hairdressername%></li>
+            <li class = "description">Price : $ <%=@style.price%> &#128181;</li>
+            <li class = "description">Rating : <%=@style.rating%> &#11088;</li>
+            <li class = "description">Type of service : <%=@style.tag%></li>
+            <li class = "description">Web page : <%=@style.studiowebsiteurl%></li>
+            <li class = "description">Name of the studio : <%=@style.studioname%></li>
+              <div id = "salonLocation">
+                <li class = "description">Coordinates : </li>
+                <li id = "map-lat" class = "description"><%= @style.lat %></li>
+                <li id = "map-lng" class = "description"><%= @style.lng %></li>
+              </div>
+          </ul>
+        </div>
+      </div>
+
     </div>
+        <div style="clear: both;"></div>
+
+
 
     <div class="distanceMap">
 
@@ -55,18 +63,20 @@
 
 
 
-    <% if (current_user != nil) && (@style.user.id == current_user.id) %>
-      <a href="/styles/<%=@style.id%>/edit">Edit</a>
+        <% if (current_user != nil) && (@style.user.id == current_user.id) %>
+          <a href="/styles/<%=@style.id%>/edit">Edit</a>
 
 
-      <form action="/styles/<%= @style.id %>" method="post">
-        <input type="hidden" name="_method" value="delete">
-        <button>Delete post</button>
-      </form>
+          <form action="/styles/<%= @style.id %>" method="post">
+            <input type="hidden" name="_method" value="delete">
+            <button>Delete post</button>
+          </form>
 
-    <% end %>
+        <% end %>
 
-  </div>
+
+
+
 
     <% @style.comments.each do |comment| %>
         <div class="commentsSection">
