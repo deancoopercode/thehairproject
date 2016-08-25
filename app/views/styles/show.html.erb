@@ -23,12 +23,12 @@
   <div class="right_container">
     <div class="table">
       <ul>
-        <li><%=@style.hairdressername%></li>
-        <li><%=@style.price%></li>
-        <li><%=@style.rating%></li>
-        <li><%=@style.tag%></li>
-        <li><%=@style.studiowebsiteurl%></li>
-        <li><%=@style.studioname%></li>
+        <li class>Hairdresser: <%=@style.hairdressername%></li>
+        <li>Price: $ <%=@style.price%></li>
+        <li>Rating: <%=@style.rating%></li>
+        <li>Type of service: <%=@style.tag%></li>
+        <li>Web page: <%=@style.studiowebsiteurl%></li>
+        <li>Name of the studio: <%=@style.studioname%></li>
           <div id = "salonLocation">
             <li>Coordinates: </li>
             <li id = "map-lat" ><%= @style.lat %></li>

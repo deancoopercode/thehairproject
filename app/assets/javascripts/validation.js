@@ -8,22 +8,12 @@ function validateSubmitSignupForm() {
     if ($( "input[name='gender']" ).val() == "") {
         missingFields += "\nGender";
     }
-    if ($( "input[name='email']" ).val() == "") {
-        missingFields += "\nEmail";
-    }
-
     if (document.getElementById("password").value == "") {
         missingFields += "\nPassword";
     }
     if (document.getElementById("email").value == "") {
         missingFields += "\nEmail";
     }
-
-
-    // if (document.getElementById("gender").value == "") {
-    //     missingFields += "\ngender";
-    // }
-
     if (missingFields == "") {
       return true;
     }
