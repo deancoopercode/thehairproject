@@ -314,6 +314,7 @@ ul {
 
 .left_container {
   width: 69%;
+  float: left;
 }
 
 button, span {
@@ -322,4 +323,26 @@ button, span {
 
 .footer {
   word-spacing: 4pt;
+}
+
+.description, h6 {
+  color: white;
+  font-family: 'Raleway', sans-serif;
+}
+
+.table {
+  display: inline-block;
+  margin-top: 50px;
+}
+
+.commentsSection {
+  background-color: black;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.newCommentContainer{
+  // width: 90%;
+  text-align: center;
+  margin-top: 50px;
 }

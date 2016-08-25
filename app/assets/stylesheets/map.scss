@@ -25,7 +25,7 @@ height: 100%;
 }
 
 #pac-input {
-  background-color: #fff;
+  background-color: #9593D9;
   font-family: Roboto;
   font-size: 15px;
   font-weight: 300;
@@ -33,7 +33,7 @@ height: 100%;
   padding: 0 11px 0 13px;
   text-overflow: ellipsis;
   width: 300px;
-  border: 2px solid red;
+  border: 2px solid #631A86;
 }
 
 #pac-input:focus {
@@ -63,7 +63,9 @@ height: 100%;
 
 // =================================DISTANCE MAP FOR SHOW PAGE
 .distanceMap {
-  width: 900px;
+  width: 85%;
+  text-align: center;
+  margin: 90px auto;
 }
 
 #mapDis {
