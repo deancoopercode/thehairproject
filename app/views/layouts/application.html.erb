@@ -48,9 +48,11 @@
             <div class="nav-bottom">
               <ul>
                 <a href="/styles"><li id="top-line">home</li></a>
-                <a href="/styles/new"><li id="top-line">new post</li></a>
-                <a href="/styles/album"><li id="top-line">my album</li></a>
-                <a href="/styles/favourites"><li id="top-line">my favourites</li></a>
+                <% if logged_in? %>
+                  <a href="/styles/new"><li id="top-line">new post</li></a>
+                  <a href="/styles/album"><li id="top-line">my album</li></a>
+                  <a href="/styles/favourites"><li id="top-line">my favourites</li></a>
+                <% end %>
               </ul>
             </div>
 
