@@ -47,11 +47,11 @@
             <!-- <hr> -->
             <div class="nav-bottom">
               <ul>
-                <a href="/styles"><li id="top-line">home</li></a>
+                <a href="/styles"><li class="bottom-line">home</li></a>
                 <% if logged_in? %>
-                  <a href="/styles/new"><li id="top-line">new post</li></a>
-                  <a href="/styles/album"><li id="top-line">my album</li></a>
-                  <a href="/styles/favourites"><li id="top-line">my favourites</li></a>
+                  <a href="/styles/new"><li class="bottom-line">new post</li></a>
+                  <a href="/styles/album"><li class="bottom-line">my album</li></a>
+                  <a href="/styles/favourites"><li class="bottom-line">my favourites</li></a>
                 <% end %>
               </ul>
             </div>
@@ -63,7 +63,7 @@
       <%= yield %>
 
       <div class = "footer">
-        <p>TheHairProject|<span> Magdalena Bialon | Dean Cooper | Denis Ng | Melbourne &copy; 2016</span></p>
+        <p id = "footer" >TheHairProject |<span> Magdalena Bialon : Dean Cooper : Denis Ng | Melbourne &copy; 2016</span></p>
       </div>
 
     </div>
