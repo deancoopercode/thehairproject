@@ -84,6 +84,10 @@ html {
   background-color: black;
   color: white;
   border: 0px;
+  // border: 1px solid white;
+  border-radius: 5px;
+  line-height: 20px;
+  width:60px;
 }
 
 hr {
@@ -160,8 +164,44 @@ video#bgvid {
 }
 
 a {
-  color           : darkblue;
-  text-decoration : underline;
+  color           : white;
+  font-family: 'Raleway', sans-serif;
+}
+
+#signupLink {
+  font-size: 0.9em;
+  border: 1px solid white;
+  border-radius: 5px;
+  line-height: 20px;
+  width:60px;
+}
+
+#login {
+  font-size: 0.9em;
+  border: 1px solid white;
+  border-radius: 5px;
+  line-height: 15px;
+  width:50px;
+  margin-left: 10px;
+}
+
+#logout {
+  font-size: 0.9em;
+  border: 1px solid white;
+  border-radius: 5px;
+  line-height: 15px;
+  width:60px;
+  margin-left: 10px;
+}
+
+#login_email {
+  height: 20px;
+  text-align: center;
+}
+
+#login_password {
+  height: 20px;
+  text-align: center;
 }
 
 .content {
