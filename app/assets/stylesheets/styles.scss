@@ -117,7 +117,7 @@ h1 {
 }
 
 .wrapper {
-  max-width : 1000px;
+  max-width : 95%;
   margin    : 0 auto;
 }
 
@@ -298,4 +298,8 @@ li {
   color: white;
   padding: 0 10px 0 10px;
 
+}
+
+.left_container {
+  width: 69%;
 }
