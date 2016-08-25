@@ -6,10 +6,11 @@ height: 100%;
 // ==============================AUTOCOMPLETE MAP FOR NEW AND EDIT PAGE
 
 #map {
-height: 300px;
-width: 900px;
-text-align: center;
-margin: 0 auto;
+  height: 400px;
+  width: 900px;
+  text-align: center;
+  margin: 0 auto;
+  border: 1px solid grey;
 }
 
 .controls {
@@ -32,6 +33,7 @@ margin: 0 auto;
   padding: 0 11px 0 13px;
   text-overflow: ellipsis;
   width: 300px;
+  border: 2px solid red;
 }
 
 #pac-input:focus {
@@ -67,6 +69,7 @@ margin: 0 auto;
 #mapDis {
   height: 350px;
   width: 100%;
+  border: 1px solid grey;
 }
 
 #floating-panel {
