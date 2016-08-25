@@ -4,24 +4,126 @@
 
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+// font-family: 'Lobster', cursive;
+
+// font-family: 'Raleway', sans-serif;
+
+// font-family: 'Cinzel', serif;
+
+* {
+  box-sizing : border-box;
+  font-family: 'Raleway', sans-serif;
+}
+
 body,
 html {
   margin : 0;
+  background-color: black;
+}
+
+.nav_bar {
+  background-color: #000000;
+  color: white;
+  font-size: 1em;
+  font-family: 'Cinzel', serif;
+  margin: 15px 0px 15px 0px;
+}
+
+.nav-top {
+  text-align: right;
+}
+
+.nav-bottom {
+  text-align: right;
+}
+
+.nav-bottom form {
+  height           : 0px;
+  padding          : 0px 10px 0px 10px;
+  color            : white;
+  height: 40px;
+  border: 0px;
+  font-size        : 0.9em;
+  margin: 0;
+}
+
+.nav-bottom form button {
+  vertical-align: middle;
+  background-color: black;
+  height: 100%;
+  color: white;
+  border: 0px;
+  font-size: 0.9em;
+  transition : 0.5s;
+
+}
+
+// #top-line {
+//   border-top: 1px solid white;
+// }
+
+.nav-bottom form button:hover {
+  background-color: rgba(40, 40, 40, 1);
+}
+
+.nav-top * {
+  display: inline-block;
+  line-height: 40px;
+  vertical-align: middle;
+  font-size: 0.9em;
+  // border-bottom: 1px solid white;
+}
+
+.nav-top button {
+  background-color: black;
+  color: white;
+  border: 0px;
+}
+
+hr {
+margin: 0px;
+padding: 0px;
+opacity: 0.2;
+width: 30%;
+right: 0px;
+display: absolute;
+}
+
+.logo {
+  display: inline-flex;
+  width: 44%;
+  vertical-align: top;
+}
+
+.login_bar {
+  display: inline-block;
+  width: 55%;
+  position: relative;
+}
+
+h1 {
+  font-family: 'Cinzel', serif;
+  font-size: 40px;
+  margin : 10px 10px;
+  display: inline-block;
+  color: #F4F4F6;
+  font-weight: lighter;
+  text-align: left;
+  line-height: 60px;
 }
 
 .wrapper {
-  max-width: 1000px;
-  margin: 0 auto;
-
+  max-width : 1000px;
+  margin    : 0 auto;
 }
 
 #video_holder {
   z-index  : 0;
   position : relative;
+  top      : 0px;
   width    : 100%;
   height   : 450px;
-  overflow: hidden;
-  top      : 0px;
+  overflow : hidden;
 }
 
 video#bgvid {
@@ -31,11 +133,6 @@ video#bgvid {
   // -ms-transform     : translateX(10%);
   // -webkit-transform : translateX(10%);
   // transform         : translateX(10%);
-}
-
-.ui-style {
-  width : 33.33%;
-  position : relative;
 }
 
 // Deans below
@@ -69,22 +166,30 @@ a {
   float : right;
 }
 
-.ui-style {
-  display          : inline-block;
-  width            : 24%;
-  margin           : 0.5%;
-  border-radius    : 10px;
-  background-color : lightblue;
-  vertical-align   : top;
-}
-
-.listing {
+.listing-holder {
   display   : flex;
+  width     : 100%;
   flex-wrap : wrap;
 }
 
+.listing {
+  display          : inline-block;
+  width            : 30%;
+  margin           : 1.5%;
+  color            : white;
+  background-color : black;
+  vertical-align   : top;
+  font-family      : 'Cinzel',
+                     serif;
+  font-size        : 0.8em;
+  font-weight      : 400;
+}
+
 .centered {
-  line-height : 2em;
+  padding        : 5px 15px 8px 15px;
+  text-align     : left;
+  vertical-align : middle;
+  line-height    : 1.5em;
 }
 
 h4 {
@@ -105,4 +210,73 @@ h4 {
   opacity : 1;
   cursor  : pointer;
   /* display: block; */
+}
+
+.filter {
+  margin-top       : 15px;
+  padding          : 5px;
+  background-color : rgb(40,40,40);
+  text-align       : left;
+  text-decoration  : none;
+  color: black;
+}
+
+.filter > ul {
+  padding-left: 20px;
+  padding-right: 0px;
+  display: inline-block;
+  color: black;
+}
+
+.ul {
+  margin     : 0px;
+  padding    : 10px;
+  list-style : none;
+}
+
+.tags {
+  display          : inline-block;
+  padding-right    : 20px;
+  border-radius    : 20px;
+  background-color : #E6E6E9;
+  text-align       : left;
+  transition       : 0.5s;
+  cursor           : pointer;
+  // border-bottom: 1px solid #adadb4;
+}
+
+.tags:hover {
+  background-color : white;
+}
+
+.tags > img {
+  height         : 30px;
+  float          : left;
+  vertical-align : top;
+}
+
+.tags > p {
+  float          : left;
+  margin         : 0px;
+  padding        : 0px 0px 0px 10px;
+  vertical-align : middle;
+  font-size      : 0.8em;
+  line-height    : 30px;
+  color: black;
+}
+
+.footer {
+  background-color: black;
+  color: white;
+  padding: 15px;
+  font-size: 0.8em;
+  font-family: 'Cinzel', serif;
+  margin-bottom: 20px;
+
+}
+
+.footer > p {
+  padding: 0;
+  font-family: 'Cinzel', serif;
+  text-align: center;
 }

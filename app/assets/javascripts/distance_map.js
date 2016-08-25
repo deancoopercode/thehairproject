@@ -17,7 +17,7 @@ function calculateAndDisplayRoute(directionsService, directionsDisplay) {
   var selectedMode = document.getElementById('mode').value;
   console.log($('#map-lat').text())
   directionsService.route({
-    origin: {lat: -37.8185716, lng: 144.9546346},  // melbourne center HARDCODED
+    origin: {lat: -37.8185716, lng: 144.9546346},  // melbourne Generel Assemb.ly HARDCODED
 
     // destination: {lat: -37.8156, lng: 144.9431},  // Hair salon HARDCODED
     destination: {lat: parseFloat($('#map-lat').text(), 10), lng: parseFloat($('#map-lng').text(), 10)},  // Hair salon.
