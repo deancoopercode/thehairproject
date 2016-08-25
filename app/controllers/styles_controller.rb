@@ -4,6 +4,14 @@ class StylesController < ApplicationController
   def index
     @styles = Style.all
   end
+
+  def filterbytag
+    @styles = Style.where(tag: params[:text])
+    render :index
+  end
+
+
+
 # post /styles
   def create
 

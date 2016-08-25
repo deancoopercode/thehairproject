@@ -9,6 +9,19 @@
 // });
 
 $('document').ready(function(){
+
+
+
+
+
+
+
+
+
+
+
+
+  
   console.log('doc ready');
   $('.js-like').on('click', function() {
     console.log('liking a style');
@@ -24,7 +37,13 @@ $('document').ready(function(){
       method: 'post'
     }).done(function(response) {
       console.log(response);
-      $likeCountSpan.html(response.like_count + ' Likes');
+
+      if (response.like_count == 1) {
+        $likeCountSpan.html(response.like_count + ' Like');
+      }
+      else {
+        $likeCountSpan.html(response.like_count + ' Likes');
+      }
     })
 
   })
