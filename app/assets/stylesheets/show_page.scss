@@ -1,0 +1,43 @@
+.edit-delete-btn {
+  margin: 50px auto;
+  text-align: center;
+  font-family: 'Raleway', sans-serif;
+  text-decoration: none;
+}
+
+
+#delete-post {
+  background-color: #590925;
+  color: white;
+  border: 0px;
+  font-family: 'Raleway', sans-serif;
+  border: 2px solid #820263;
+  border-radius: 5px;
+  font-size: 15px;
+  padding: 5px;
+  margin-left: 20px;
+}
+
+
+#go-to-edit{
+  background-color: #01FDF6;
+  border: 2px solid #ADF5FF;
+  padding: 4px;
+  border-radius: 5px;
+  margin-right: 20px;
+}
+
+#submit-comment{
+  background-color: black;
+  color: white;
+  border: 0px;
+  font-family: 'Raleway', sans-serif;
+  border: 1px solid white;
+  border-radius: 5px;
+  width: 60px;
+  padding: 5px;
+}
+
+.right_container {
+  // background-color: #2A2A2A;
+}
