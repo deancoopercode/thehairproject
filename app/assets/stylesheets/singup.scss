@@ -1,0 +1,36 @@
+.signupDiv {
+  text-align: center;
+  margin: 200px auto;;
+}
+
+#signupForm{
+  width: 100%;
+}
+
+
+.singin-input {
+  width: 20%;
+  height: 30px;
+  margin: 5px;
+  font-family: 'Raleway', sans-serif;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 300;
+  color: black;
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #666666;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: #666666;
+}
+
+#signup-button {
+  background-color: black;
+  color: white;
+  border: 0px;
+  font-family: 'Raleway', sans-serif;
+  border: 1px solid white;
+  border-radius: 5px;
+}
