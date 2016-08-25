@@ -1,18 +1,22 @@
 
+
 <div class = "show_container">
 
-  <div class="left_container">
-
-    <div class="pic1">
-      <img src="<%=@style.hairpicfront%>" alt="">
-    </div>
-
-    <div class="pic2">
-      <img src="<%=@style.hairpicback%>" alt="">
-    </div>
-
-    <div class="pic3">
-      <img src="<%=@style.hairpicside%>" alt="">
+  <div class="left_container" style="width:400px;">
+    <div id="thumbnail-slider">
+        <div class="inner">
+            <ul>
+                <li>
+                    <a class="thumb" href="<%=@style.hairpicfront%>"></a>
+                </li>
+                <li>
+                    <a class="thumb" href="<%=@style.hairpicside%>"></a>
+                </li>
+                <li>
+                    <a class="thumb" href="<%=@style.hairpicback%>"></a>
+                </li>
+            </ul>
+        </div>
     </div>
   </div>
 
@@ -32,8 +36,6 @@
           </div>
       </ul>
     </div>
-
-
 
     <div class="distanceMap">
 
