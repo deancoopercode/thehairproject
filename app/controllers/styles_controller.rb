@@ -3,11 +3,6 @@ class StylesController < ApplicationController
 # get /styles
   def index
     @styles = Style.all
-    @liked_styles = Style.joins(:likes).group(:style_id).count(:style_id)
-    @top_styles = Style.select("count(style_id) as likes_count, hairpicfront")
-      .joins(:likes)
-      .group("style_id, hairpicfront")
-      .order("likes_count desc")
   end
 
   def filterbytag
