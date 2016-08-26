@@ -3,11 +3,14 @@ class StylesController < ApplicationController
 # get /styles
   def index
     @styles = Style.all
+    @selectedTag = 'none';
   end
 
   def filterbytag
-    @styles = Style.where(tag: params[:text])
-    render :index
+    #@style = Style.where(tag: params[:text]),:include => [:user, :likes]
+    # if @style.count
+    render json: Style.where(tag: params[:text]),:include => [:user, :likes]
+    # render json: {error: 'no record found'}, status: 404
   end
 
 
