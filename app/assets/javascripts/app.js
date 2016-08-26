@@ -17,13 +17,14 @@ $('document').ready(function(){
                 if (styles.length > 0) {
 
                   styles.forEach(function(style) {
-                      console.log('blah');
                     var $listing = $('<div>', {class: "listing"})
                     $listing.data('id', style.id);
                     var $imageDiv = $('<div>', {class: "image"})
-                      .append($('<a>', {src: '/styles/' + style.id}))
-                      .append($('<img>', {src: style.hairpicfront}))
 
+                    var $anchorDiv = ($('<a>', {href: '/styles/' + style.id}))
+                        .append($('<img>', {src: style.hairpicfront}))
+
+                    $anchorDiv.appendTo($imageDiv);
                       var $centeredContentDiv = $('<div>').addClass('centered content')
 
                       if (style.likes.length == 1) {
