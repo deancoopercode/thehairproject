@@ -11,16 +11,25 @@
     </video> -->
 
   </div>
-  <div class = "filter">
+  <div id="mainTagFilter" class = "filter" data-id="<%= @selectedTag %>">
     <ul>
-      <a href="/styles/tag/undercut"><li class="tags"><%=image_tag("undercut.png")%><p>Undercut</p></li></a>
+      <!-- <a href="/styles/tag/undercut"><li class="tags"><%=image_tag("undercut.png")%><p>Undercut</p></li></a>
       <a href="/styles/tag/fade"><li class="tags"><%=image_tag("fade.png")%><p>Fade</p></li></a>
       <a href="/styles/tag/shortbacksides"><li class="tags"><%=image_tag("short-back-sides.png")%><p>Short Back Sides</p></li></a>
       <a href="/styles/tag/sidepart"><li class="tags"><%=image_tag("side-part.png")%><p>Side Part</p></li></a>
       <a href="/styles/tag/haircut"><li class="tags"><%=image_tag("haircut.png")%><p>Haircut</p></li></a>
       <a href="/styles/tag/hairstyling"><li class="tags"><%=image_tag("hairstyling.png")%><p>Hairstyling</p></li></a>
       <a href="/styles/tag/haircolor"><li class="tags"><%=image_tag("hair-color.png")%><p>Hair Colour</p></li></a>
-      <a href="/styles/tag/other"><li class="tags"><%=image_tag("other.png")%><p>Other</p></li></a>
+      <a href="/styles/tag/other"><li class="tags"><%=image_tag("other.png")%><p>Other</p></li></a> -->
+
+      <li data-id="/styles/tag/undercut/" class="tags"><%=image_tag("undercut.png")%><p>Undercut</p></li>
+      <li class="tags"><%=image_tag("fade.png")%><p>Fade</p></li>
+      <li class="tags"><%=image_tag("short-back-sides.png")%><p>Short Back Sides</p></li>
+      <li class="tags"><%=image_tag("side-part.png")%><p>Side Part</p></li>
+      <li class="tags"><%=image_tag("haircut.png")%><p>Haircut</p></li>
+      <li class="tags"><%=image_tag("hairstyling.png")%><p>Hairstyling</p></li>
+      <li class="tags"><%=image_tag("hair-color.png")%><p>Hair Colour</p></li>
+      <li class="tags"><%=image_tag("other.png")%><p>Other</p></li>
     </ul>
 
 </div>
@@ -41,7 +50,7 @@
         <% if (style.likes.count == 0) || (style.likes.count > 1) %>
           <span class="like-count"><%= style.likes.count %> Likes</span>
         <% end %>
-        <span class="star right js-like">	&#10084;</span>
+        <span class="star right js-like">&hearts;</span>
       </div>
     </div>
   <% end %>
