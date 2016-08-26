@@ -202,12 +202,12 @@ s12 = Style.create ({
   studioname: 'Rakis on Collins',
   studiowebsiteurl: 'http://www.rakis.com.au/',
   hairdressername: 'Andrew',
-  hairpicfront: 'https://files.slack.com/files-pri/T0351JZQ0-F2567J0J2/slack_for_ios_upload.jpg',
-  hairpicside: 'https://files.slack.com/files-pri/T0351JZQ0-F2567GXJS/slack_for_ios_upload.jpg',
-  hairpicback: 'https://files.slack.com/files-pri/T0351JZQ0-F2567EWF8/slack_for_ios_upload.jpg',
+  hairpicfront: 'http://i.imgur.com/6X1UAwc.png',
+  hairpicside: 'http://i.imgur.com/7Mmmj2b.png',
+  hairpicback: 'http://i.imgur.com/ykTWhFa.png',
   price: '45',
   rating: '4',
-  user_id: u9.id,
+  user_id: u12.id,
   lat: '-37.814938',
   lng: '144.967652'
 })
@@ -217,15 +217,14 @@ s13 = Style.create ({
   studioname: 'Billie Jean Hair',
   studiowebsiteurl: 'http://www.billiejeanhair.com/',
   hairdressername: 'Anna',
-  hairpicfront: 'http://i.imgur.com/T0xcvCi.png',
-  hairpicside: 'http://i.imgur.com/CXtC4uK.png',
-  hairpicback: 'http://i.imgur.com/FQ7xElG.png',
+  hairpicfront: 'https://files.slack.com/files-pri/T0351JZQ0-F256BSZT2/slack_for_ios_upload.jpg',
+  hairpicside: 'https://files.slack.com/files-pri/T0351JZQ0-F2567GXJS/slack_for_ios_upload.jpg',
+  hairpicback: 'https://files.slack.com/files-pri/T0351JZQ0-F2567EWF8/slack_for_ios_upload.jpg',
   price: '500',
   rating: '5',
-  user_id: u1.id,
+  user_id: u9.id,
   lat: '-37.8122912',
   lng: '144.9581958'
-
 })
 
 c1 = Comment.create ({
@@ -279,7 +278,7 @@ c8 = Comment.create ({
 c9 = Comment.create ({
   style_id: s9.id,
   user_id: u1.id,
-  text: 'This looks like SHITE!!!'
+  text: 'Pretty.... PRETTY BAD :P'
   })
 
 c10 = Comment.create ({
@@ -359,6 +358,46 @@ l12 = Like.create ({
   style_id: s10.id,
   user_id: u1.id,
   })
+
+l13 = Like.create ({
+  style_id: s13.id,
+  user_id: u9.id,
+  })
+
+
+l14 = Like.create ({
+  style_id: s13.id,
+  user_id: u1.id,
+  })
+
+
+l15 = Like.create ({
+  style_id: s13.id,
+  user_id: u2.id,
+  })
+
+
+l16 = Like.create ({
+  style_id: s13.id,
+  user_id: u3.id,
+  })
+
+l17 = Like.create ({
+  style_id: s13.id,
+  user_id: u4.id,
+  })
+
+l18 = Like.create ({
+  style_id: s13.id,
+  user_id: u5.id,
+  })
+
+l19 = Like.create ({
+  style_id: s13.id,
+  user_id: u6.id,
+  })
+
+
   # male side - http://i.imgur.com/cwlwdUE.png
   # male side - http://i.imgur.com/EEd6CQt.png
   # male side - http://i.imgur.com/0hZTv9p.png
