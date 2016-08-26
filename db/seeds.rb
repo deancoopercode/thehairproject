@@ -29,7 +29,7 @@ u9 = User.create({ name: 'Tadisha', password: 'tadisha', email: 'tadisa@ga.co', 
   # male back - http://i.imgur.com/EUSIERe.png
 
 s1 = Style.create ({
-  tag: 'colour',
+  tag: 'haircolor',
   studioname: 'Billie Jean Hair',
   studiowebsiteurl: 'http://www.billiejeanhair.com/',
   hairdressername: 'Deanne',
@@ -62,7 +62,7 @@ s2 = Style.create ({
 s3 = Style.create ({
   tag: 'haircut',
   studioname: 'Toni & Guy',
-  studiowebsiteurl: 'http://www.rakis.com.au/',
+  studiowebsiteurl: 'http://www.T&G.com.au/',
   hairdressername: 'Andrew',
   hairpicfront: 'http://i.imgur.com/CPwvwKn.png',
   hairpicside: 'http://i.imgur.com/2pzuSAZ.png',
@@ -75,9 +75,9 @@ s3 = Style.create ({
 })
 
 s4 = Style.create ({
-  tag: 'colour',
+  tag: 'haircolor',
   studioname: 'Edwards and Co.',
-  studiowebsiteurl: 'http://www.sui.com.au/',
+  studiowebsiteurl: 'http://www.edwardsandco.com.au/',
   hairdressername: 'Sui',
   hairpicfront: 'http://i.imgur.com/T0xcvCi.png',
   hairpicside: 'http://i.imgur.com/CXtC4uK.png',
@@ -88,9 +88,6 @@ s4 = Style.create ({
   lat: '-37.810343',
   lng: '144.97114699999997'
 })
-
-
-
 
 s5 = Style.create ({
   tag: 'undercut',
@@ -110,7 +107,7 @@ s5 = Style.create ({
 s6 = Style.create ({
   tag: 'fade',
   studioname: 'Toni & Guy',
-  studiowebsiteurl: 'http://www.rakis.com.au/',
+  studiowebsiteurl: 'http://www.T&G.com.au/',
   hairdressername: 'Andrew',
   hairpicfront: 'http://i.imgur.com/W4bydjK.png',
   hairpicside: 'http://i.imgur.com/0hZTv9p.png',
@@ -123,7 +120,7 @@ s6 = Style.create ({
 })
 
 s7 = Style.create ({
-  tag: 'colour',
+  tag: 'hairstyling',
   studioname: 'Toni & Guy',
   studiowebsiteurl: 'http://www.rakis.com.au/',
   hairdressername: 'Melinda',
@@ -153,7 +150,7 @@ s8 = Style.create ({
 })
 
 s9 = Style.create ({
-  tag: 'colour',
+  tag: 'hairstyling',
   studioname: 'Yoshiko Hair',
   studiowebsiteurl: 'http://www.rakis.com.au/',
   hairdressername: 'Anthony',
