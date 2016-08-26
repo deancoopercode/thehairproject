@@ -4,9 +4,9 @@
     <%= video_tag "slowhair.mp4", controls: false, autoplay: true, muted: true, loop: true, id: "bgvid" %>
   </div>
   <input class = "new-st-input" type="hidden" name = "tag" id="tags-input">
-
+  <a id='tagScroll' name='tagScroll'></a>
   <div id="mainTagFilter" class = "filter" data-id="<%= @selectedTag %>">
-    <ul id="newStyleUl"><a id='tagScroll' name='tagScroll'></a>
+    <ul id="newStyleUl">
       <li data-id="/styles/tag/undercut/" class="tags"><%=image_tag("undercut.png")%><p>Undercut</p></li>
       <li data-id="/styles/tag/fade/" class="tags"><%=image_tag("fade.png")%><p>Fade</p></li>
       <li data-id="/styles/tag/shortbacksides/" class="tags"><%=image_tag("short-back-sides.png")%><p>Short Back Sides</p></li>
