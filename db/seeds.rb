@@ -15,6 +15,10 @@ u6 = User.create({ name: 'Jordan', password: 'jordan', email: 'jordan@ga.co', ge
 u7 = User.create({ name: 'Andrea', password: 'andrea', email: 'andrea@ga.co', gender: 'F' })
 u8 = User.create({ name: 'Ray', password: 'ray', email: 'ray@ga.co', gender: 'M' })
 u9 = User.create({ name: 'Tadisha', password: 'tadisha', email: 'tadisa@ga.co', gender: 'F' })
+u10 = User.create({ name: 'Anthonasia', password: 'anthonasia', email: 'anthonasia@ga.co', gender: 'F' })
+u11 = User.create({ name: 'Harry', password: 'harry', email: 'harry@ga.co', gender: 'F' })
+u12 = User.create({ name: 'DT', password: 'dt', email: 'dt@ga.co', gender: 'M' })
+
 
   # female front - http://i.imgur.com/RVFAG7y.png
   # female back - http://i.imgur.com/X7aNUPQ.png
@@ -33,9 +37,9 @@ s1 = Style.create ({
   studioname: 'Billie Jean Hair',
   studiowebsiteurl: 'http://www.billiejeanhair.com/',
   hairdressername: 'Deanne',
-  hairpicfront: 'http://i.imgur.com/RVFAG7y.png',
-  hairpicside: 'http://i.imgur.com/w0ZRa8w.png',
-  hairpicback: 'http://i.imgur.com/X7aNUPQ.png',
+  hairpicfront: 'http://i.imgur.com/T0xcvCi.png',
+  hairpicside: 'http://i.imgur.com/CXtC4uK.png',
+  hairpicback: 'http://i.imgur.com/FQ7xElG.png',
   price: '100',
   rating: '3',
   user_id: u1.id,
@@ -79,9 +83,9 @@ s4 = Style.create ({
   studioname: 'Edwards and Co.',
   studiowebsiteurl: 'http://www.edwardsandco.com.au/',
   hairdressername: 'Sui',
-  hairpicfront: 'http://i.imgur.com/T0xcvCi.png',
-  hairpicside: 'http://i.imgur.com/CXtC4uK.png',
-  hairpicback: 'http://i.imgur.com/FQ7xElG.png',
+  hairpicfront: 'http://i.imgur.com/4YMaerB.png',
+  hairpicside: 'http://i.imgur.com/lnNCnyf.png',
+  hairpicback: 'http://i.imgur.com/n6UB0Xr.png',
   price: '300',
   rating: '2',
   user_id: u4.id,
@@ -124,9 +128,9 @@ s7 = Style.create ({
   studioname: 'Toni & Guy',
   studiowebsiteurl: 'http://www.rakis.com.au/',
   hairdressername: 'Melinda',
-  hairpicfront: 'http://i.imgur.com/4YMaerB.png',
-  hairpicside: 'http://i.imgur.com/lnNCnyf.png',
-  hairpicback: 'http://i.imgur.com/n6UB0Xr.png',
+  hairpicfront: 'http://i.imgur.com/RVFAG7y.png',
+  hairpicside: 'http://i.imgur.com/w0ZRa8w.png',
+  hairpicback: 'http://i.imgur.com/X7aNUPQ.png',
   price: '110',
   rating: '5',
   user_id: u7.id,
@@ -162,6 +166,51 @@ s9 = Style.create ({
   user_id: u9.id,
   lat: '-37.8592634',
   lng: '144.9773182'
+})
+
+s10 = Style.create ({
+  tag: 'haircut',
+  studioname: 'Japan Salon',
+  studiowebsiteurl: 'http://www.yousukisuki.com.au/',
+  hairdressername: 'Latisha',
+  hairpicfront: 'https://i.imgur.com/XR2DplI.png',
+  hairpicside: 'https://i.imgur.com/ireUllo.png',
+  hairpicback: 'https://i.imgur.com/BhM68Y2.png',
+  price: '150',
+  rating: '4',
+  user_id: u9.id,
+  lat: '-37.8592634',
+  lng: '144.9773182'
+})
+
+s11 = Style.create ({
+  tag: 'haircut',
+  studioname: 'Billie Jean Hair',
+  studiowebsiteurl: 'http://www.billiejeanhair.com/',
+  hairdressername: 'Deanne',
+  hairpicfront: 'http://i.imgur.com/T0xcvCi.png',
+  hairpicside: 'http://i.imgur.com/CXtC4uK.png',
+  hairpicback: 'http://i.imgur.com/FQ7xElG.png',
+  price: '100',
+  rating: '3',
+  user_id: u11.id,
+  lat: '-37.8122912',
+  lng: '144.9581958'
+})
+
+s12 = Style.create ({
+  tag: 'hairstyling',
+  studioname: 'Rakis on Collins',
+  studiowebsiteurl: 'http://www.rakis.com.au/',
+  hairdressername: 'Andrew',
+  hairpicfront: 'http://i.imgur.com/6X1UAwc.png',
+  hairpicside: 'http://i.imgur.com/7Mmmj2b.png',
+  hairpicback: 'http://i.imgur.com/ykTWhFa.png',
+  price: '45',
+  rating: '4',
+  user_id: u12.id,
+  lat: '-37.814938',
+  lng: '144.967652'
 })
 
 c1 = Comment.create ({
@@ -218,6 +267,24 @@ c9 = Comment.create ({
   text: 'This looks like SHITE!!!'
   })
 
+c10 = Comment.create ({
+  style_id: s10.id,
+  user_id: u2.id,
+  text: 'MMMMMM yessss please!!!'
+  })
+
+c11 = Comment.create ({
+  style_id: s11.id,
+  user_id: u4.id,
+  text: 'This looks great.'
+  })
+
+c12 = Comment.create ({
+  style_id: s12.id,
+  user_id: u3.id,
+  text: 'This looks bad ass ****!'
+  })
+
 l1 = Like.create ({
   style_id: s1.id,
   user_id: u9.id,
@@ -263,6 +330,20 @@ l9 = Like.create ({
   user_id: u1.id,
   })
 
+l10 = Like.create ({
+  style_id: s10.id,
+  user_id: u1.id,
+  })
+
+l11 = Like.create ({
+  style_id: s9.id,
+  user_id: u1.id,
+  })
+
+l12 = Like.create ({
+  style_id: s10.id,
+  user_id: u1.id,
+  })
   # male side - http://i.imgur.com/cwlwdUE.png
   # male side - http://i.imgur.com/EEd6CQt.png
   # male side - http://i.imgur.com/0hZTv9p.png
