@@ -20,18 +20,6 @@ u11 = User.create({ name: 'Harry', password: 'harry', email: 'harry@ga.co', gend
 u12 = User.create({ name: 'DT', password: 'dt', email: 'dt@ga.co', gender: 'M' })
 
 
-  # female front - http://i.imgur.com/RVFAG7y.png
-  # female back - http://i.imgur.com/X7aNUPQ.png
-  # female side - http://i.imgur.com/w0ZRa8w.png
-
-  # male front - http://i.imgur.com/6X1UAwc.png
-  # male side - http://i.imgur.com/7Mmmj2b.png
-  # male back - http://i.imgur.com/ykTWhFa.png
-
-  # male front - http://i.imgur.com/CPwvwKn.png
-  # male side - http://i.imgur.com/2pzuSAZ.png
-  # male back - http://i.imgur.com/EUSIERe.png
-
 s1 = Style.create ({
   tag: 'haircolor',
   studioname: 'Billie Jean Hair',
@@ -395,7 +383,6 @@ l15 = Like.create ({
   user_id: u2.id,
   })
 
-
 l16 = Like.create ({
   style_id: s13.id,
   user_id: u3.id,
@@ -415,17 +402,3 @@ l19 = Like.create ({
   style_id: s13.id,
   user_id: u6.id,
   })
-
-
-  # male side - http://i.imgur.com/cwlwdUE.png
-  # male side - http://i.imgur.com/EEd6CQt.png
-  # male side - http://i.imgur.com/0hZTv9p.png
-  # male side - http://i.imgur.com/qXtpxl3.png
-  # female front - http://i.imgur.com/cIIoXiD.png
-  # female front - http://i.imgur.com/T0xcvCi.png
-  # female back - http://i.imgur.com/FQ7xElG.png
-  # female back - http://i.imgur.com/OoQn71E.png
-  # female side - http://i.imgur.com/mTi40jh.png
-  # female side - http://i.imgur.com/CXtC4uK.png
-  # male back - http://i.imgur.com/Qx10ah7.png
-  # male front - http://i.imgur.com/W4bydjK.png

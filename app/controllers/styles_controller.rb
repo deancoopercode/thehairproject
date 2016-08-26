@@ -13,12 +13,8 @@ class StylesController < ApplicationController
   end
 
   def filterbytag
-    #@style = Style.where(tag: params[:text]),:include => [:user, :likes]
-    # if @style.count
     render json: Style.where(tag: params[:text]),:include => [:user, :likes]
-     #render json: {error: 'no record found'}, status: 404
   end
-
 
 
 # post /styles
@@ -82,16 +78,8 @@ class StylesController < ApplicationController
 
   def showfavourites
     # find the liked styles for this user
-    # @styles = Style.includes(:likes).where('likes.user_id = ?', current_user.id)
-
     @styles =  Style.includes(:likes).where("likes.user_id = ?", current_user.id).references(:likes)
-
-
     render :showfavourites
-
-    # Style.joins( :likes => :style )
-    #           .where( :likes => {:user_id => current_user.id})
-
   end
 
 end

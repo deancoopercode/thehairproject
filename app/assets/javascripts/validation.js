@@ -21,5 +21,4 @@ function validateSubmitSignupForm() {
       alert("Some fields are missing: " + missingFields);
       return false;
     }
-
 }
