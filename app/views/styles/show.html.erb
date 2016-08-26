@@ -22,21 +22,43 @@
         </div>
       </div>
 
-      <div class="right_container">
-        <div class="table">
-          <ul>
-            <li class = "description">Hairdresser : <%=@style.hairdressername%></li>
-            <li class = "description">Price : $ <%=@style.price%> &#128181;</li>
-            <li class = "description">Rating : <%=@style.rating%> &#11088;</li>
-            <li class = "description">Type of service : <%=@style.tag%></li>
-            <li class = "description">Web page : <%=@style.studiowebsiteurl%></li>
-            <li class = "description">Name of the studio : <%=@style.studioname%></li>
-              <div id = "salonLocation">
-                <li class = "description">Coordinates : </li>
-                <li id = "map-lat" class = "description"><%= @style.lat %></li>
-                <li id = "map-lng" class = "description"><%= @style.lng %></li>
-              </div>
-          </ul>
+      <div class = "right_container">
+        <div class = "table-styleDescription">
+          <table>
+            <tr>
+              <td class = "description">Hairdresser </td>
+              <td class = "des_data"><%=@style.hairdressername%></td>
+            </tr>
+            <tr>
+              <td class = "description">Price </td>
+              <td class = "des_data">$ <%=@style.price%> &#128181;</td>
+            </tr>
+            <tr>
+              <td class = "description">Rating </td>
+              <td class = "des_data">&#11088; <%=@style.rating%></td>
+            </tr>
+            <tr>
+              <td class = "description">Type of service </td>
+              <td class = "des_data"><%=@style.tag%></td>
+            </tr>
+            <tr>
+              <td class = "description">Web page </td>
+              <td class = "des_data"><%=@style.studiowebsiteurl%></td>
+            </tr>
+            <tr>
+              <td class = "description">Studio name</td>
+              <td class = "des_data"><%=@style.studioname%></td>
+            </tr>
+         </table>
+
+          <div id = "salonLocation">
+            <ul>
+              <li class = "coord">Coordinates : </li>
+              <li id = "map-lat" class = "coord"><%= @style.lat %></li>
+              <li id = "map-lng" class = "coord"><%= @style.lng %></li>
+            </ul>
+          </div>
+
         </div>
       </div>
 
@@ -89,7 +111,7 @@
                   <form action="/comments/<%= comment['id'] %>" method="post">
                     <input type="hidden" name="_method" value="delete">
                     <input type="hidden" name="style_id" value="<%=@style.id%>">
-                    <button>Delete</button>
+                    <button id = "delete-comment">Delete comment</button>
                   </form>
                 <% end %>
 

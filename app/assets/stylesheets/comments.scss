@@ -13,6 +13,8 @@
   float: left;
   border-bottom: 1px solid grey;
   padding: 5px;
+  margin-bottom: 15px;
+  font-family: 'Raleway', sans-serif;
 
 }
 
@@ -23,7 +25,7 @@
 
 #newCommentText{
   width: 80%;
-  
+
   height: 30px;
   font-size: 0.85em;
 }
@@ -37,7 +39,9 @@
 }
 
 #commentText {
-  height: 100px;
+  padding: 15px;
+  font-family: 'Raleway', sans-serif;
+  text-align: center;
 }
 
 form {
@@ -52,14 +56,16 @@ form {
 
 .commentsSection {
   background-color: white;
+  width: 90%;
+  margin: 15px auto;
 }
 
 .commentsContainer {
   margin-left: 50px;
   background-color: #f4f4f4;
   border: 1px solid gray;
-  margin: 5px auto;
-  width: 95%;
+  margin: 0 auto;
+  background-color: white;
 }
 
 #newCommentsForm {
@@ -70,6 +76,8 @@ form {
   margin: 10px auto;
   width: 95%;
   border-radius: 10px;
+  text-align: center;
+  margin-top: 50px;
 }
 
 .postContainer {
@@ -78,4 +86,16 @@ form {
     margin-bottom: 50px;
     width: 80%;
     border: 1px solid black;
+}
+
+#delete-comment {
+  background-color: #5B2333;
+  color: white;
+  border: 0px;
+  font-family: 'Raleway', sans-serif;
+  border: 1px solid #820263;
+  border-radius: 5px;
+  font-size: 10px;
+  padding: 5px;
+  margin-left: 20px;
 }
