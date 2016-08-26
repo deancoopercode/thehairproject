@@ -299,6 +299,25 @@ c12 = Comment.create ({
   text: 'This looks bad ass ****!'
   })
 
+
+c13 = Comment.create ({
+  style_id: s13.id,
+  user_id: u3.id,
+  text: 'love it'
+  })
+
+c14 = Comment.create ({
+  style_id: s13.id,
+  user_id: u7.id,
+  text: 'Sexy boy!'
+  })
+
+c15 = Comment.create ({
+  style_id: s13.id,
+  user_id: u6.id,
+  text: 'tad is rad'
+  })
+
 l1 = Like.create ({
   style_id: s1.id,
   user_id: u9.id,
