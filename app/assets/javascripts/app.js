@@ -3,9 +3,7 @@ $('document').ready(function(){
     $('#mainTagFilter ul li').on('click', function() {
 
 
-      $(document.body).animate({
-          'scrollTop':   $('#tagScroll').offset().top
-      }, 500);
+
 
       var $listingHolder = $(".listing_holder")
       var route = $(event.target).closest('li').data('id');
@@ -55,6 +53,11 @@ $('document').ready(function(){
                         $h1Div.appendTo($listingHolder);
                   }
                 });
+
+                $(document.body).animate({
+                    'scrollTop':   $('#tagScroll').offset().top
+                }, 500);
+
                 })
 
 
