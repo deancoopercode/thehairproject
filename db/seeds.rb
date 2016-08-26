@@ -45,7 +45,6 @@ s1 = Style.create ({
   user_id: u1.id,
   lat: '-37.8122912',
   lng: '144.9581958'
-
 })
 
 s2 = Style.create ({
@@ -203,14 +202,30 @@ s12 = Style.create ({
   studioname: 'Rakis on Collins',
   studiowebsiteurl: 'http://www.rakis.com.au/',
   hairdressername: 'Andrew',
-  hairpicfront: 'http://i.imgur.com/6X1UAwc.png',
-  hairpicside: 'http://i.imgur.com/7Mmmj2b.png',
-  hairpicback: 'http://i.imgur.com/ykTWhFa.png',
+  hairpicfront: 'https://files.slack.com/files-pri/T0351JZQ0-F2567J0J2/slack_for_ios_upload.jpg',
+  hairpicside: 'https://files.slack.com/files-pri/T0351JZQ0-F2567GXJS/slack_for_ios_upload.jpg',
+  hairpicback: 'https://files.slack.com/files-pri/T0351JZQ0-F2567EWF8/slack_for_ios_upload.jpg',
   price: '45',
   rating: '4',
-  user_id: u12.id,
+  user_id: u9.id,
   lat: '-37.814938',
   lng: '144.967652'
+})
+
+s13 = Style.create ({
+  tag: 'hairstyling',
+  studioname: 'Billie Jean Hair',
+  studiowebsiteurl: 'http://www.billiejeanhair.com/',
+  hairdressername: 'Anna',
+  hairpicfront: 'http://i.imgur.com/T0xcvCi.png',
+  hairpicside: 'http://i.imgur.com/CXtC4uK.png',
+  hairpicback: 'http://i.imgur.com/FQ7xElG.png',
+  price: '500',
+  rating: '5',
+  user_id: u1.id,
+  lat: '-37.8122912',
+  lng: '144.9581958'
+
 })
 
 c1 = Comment.create ({
