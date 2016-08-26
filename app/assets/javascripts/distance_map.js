@@ -1,6 +1,6 @@
 // hi there anyone reading the code ;) or CHECKING IT AND MARKING > HARRY
 
-
+var latitude, longitude;
 
 function disMap() {
   var directionsDisplay = new google.maps.DirectionsRenderer;
@@ -18,25 +18,45 @@ function disMap() {
   document.getElementById('mode').addEventListener('change', function() {
     calculateAndDisplayRoute(directionsService, directionsDisplay);
   });
-}
 
-function calculateAndDisplayRoute(directionsService, directionsDisplay) {
-  var selectedMode = document.getElementById('mode').value;
-  // console.log($('#map-lat').text())
-  directionsService.route({
-    origin: {lat: -37.818535, lng: 144.958998},  // melbourne Generel Assemb.ly HARDCODED
 
-    // destination: {lat: -37.8156, lng: 144.9431},  // Hair salon HARDCODED
-    destination: {lat: parseFloat($('#map-lat').text(), 10), lng: parseFloat($('#map-lng').text(), 10)},  // Hair salon.
-    // Note that Javascript allows us to access the constant
-    // using square brackets and a string value as its
-    // "property."
-    travelMode: google.maps.TravelMode[selectedMode]
-  }, function(response, status) {
-    if (status == 'OK') {
-      directionsDisplay.setDirections(response);
-    } else {
-      window.alert('Directions request failed due to ' + status);
-    }
-  });
+
+    function calculateAndDisplayRoute(directionsService, directionsDisplay) {
+      var selectedMode = document.getElementById('mode').value;
+      // console.log($('#map-lat').text())
+
+        navigator.geolocation.getCurrentPosition(function(position) {
+           var geolocate = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+
+           var infowindow = new google.maps.InfoWindow({
+              //  map: mapDis,
+               position: geolocate,
+           });
+
+
+          directionsService.route({
+
+            origin: {lat: position.coords.latitude, lng: position.coords.longitude},  // melbourne Generel Assemb.ly HARDCODED  origin: {lat: -37.818535, lng: 144.958998},
+
+            // destination: {lat: -37.8156, lng: 144.9431},  // Hair salon HARDCODED
+            destination: {lat: parseFloat($('#map-lat').text(), 10), lng: parseFloat($('#map-lng').text(), 10)},  // Hair salon.
+
+
+            // Note that Javascript allows us to access the constant
+            // using square brackets and a string value as its
+            // "property."
+            travelMode: google.maps.TravelMode[selectedMode]
+          }, function(response, status) {
+            if (status == 'OK') {
+              directionsDisplay.setDirections(response);
+            } else {
+              window.alert('Directions request failed due to ' + status);
+            }
+          });
+
+      });
+        // console.log(latitude);
+
+  }
+
 }
