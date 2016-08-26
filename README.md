@@ -1,6 +1,6 @@
 ###Project #3: Building Your Own API
 
-![](http://i.imgur.com/wPDcLQ0.gif)
+![](http://i.imgur.com/j2uHG3x.gif)
 
 Assignment instructions :page_facing_up::
 https://gist.github.com/epoch/437cb84bfcef85f4a09f#file-wdi_project3-md
@@ -49,4 +49,4 @@ Direct your browser by clicking on the application URL above and load the page.
 
 
 
-This Web Site is brought to you by the 3 Nuggets :tm:
+*This Web Site is brought to you by the 3 Nuggets :tm: *
