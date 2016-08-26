@@ -26,28 +26,28 @@
         <div class = "table-styleDescription">
           <table>
             <tr>
+              <tr>
+                <td class = "description">Type of service </td>
+                <td class = "des_data"><%=@style.tag%></td>
+              </tr>
+              <tr>
+                <td class = "description">Rating </td>
+                <td class = "des_data">&#11088; <%=@style.rating%></td>
+              </tr>
+              <tr>
+                <td class = "description">Price </td>
+                <td class = "des_data">$ <%=@style.price%> &#128181;</td>
+              </tr>
               <td class = "description">Hairdresser </td>
               <td class = "des_data"><%=@style.hairdressername%></td>
             </tr>
             <tr>
-              <td class = "description">Price </td>
-              <td class = "des_data">$ <%=@style.price%> &#128181;</td>
-            </tr>
-            <tr>
-              <td class = "description">Rating </td>
-              <td class = "des_data">&#11088; <%=@style.rating%></td>
-            </tr>
-            <tr>
-              <td class = "description">Type of service </td>
-              <td class = "des_data"><%=@style.tag%></td>
+              <td class = "description">Studio name</td>
+              <td class = "des_data"><%=@style.studioname%></td>
             </tr>
             <tr>
               <td class = "description">Web page </td>
               <td class = "des_data"><%=@style.studiowebsiteurl%></td>
-            </tr>
-            <tr>
-              <td class = "description">Studio name</td>
-              <td class = "des_data"><%=@style.studioname%></td>
             </tr>
          </table>
 
