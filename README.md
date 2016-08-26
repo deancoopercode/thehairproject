@@ -1,29 +1,7 @@
-# README
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
 ###Project #3: Building Your Own API
+
+Link to assignment question
+https://gist.github.com/epoch/437cb84bfcef85f4a09f#file-wdi_project3-md
 
 ## Title: The Hair Projekt
 
@@ -46,9 +24,12 @@ https://trello.com/b/2aTSiKi0
 
 ##3.  Technologies
 
-Technologies used to build this app include: Ruby on Rails, HTML, CSS and AJAX. In addition, PostgreSQL was used in the formation of the database. Trello was used for our group project management and workflow assistance. Heroku is being used as a cloud platform to host our application.
+Technologies used to build this app include: Ruby on Rails(v2.3.1), HTML, CSS and AJAX. In addition, PostgreSQL was used in the formation of the database. Trello was used for our group project management and workflow assistance. Heroku is being used as a cloud platform to host our application (below).
 
 ##4. Deployment
 
+We used Heroku as our deployment platform. We then followed the guideline created by the legendary HMAN1911
+
+https://gist.github.com/HMAN1911/07dbef3b02d38161b93b867bb676e754
 
 ##5.  Installation/Startup Instructions
