@@ -1,27 +1,25 @@
-// if($("#mainTagFilter").length > 0){
-//     $(document).ready(function(){
-//         console.log('its here');
-//         console.log($("#mainTagFilter").data('id'));
-//     });
-// }
-
 $('document').ready(function(){
 
     $('#mainTagFilter ul li').on('click', function() {
 
+
+      $(document.body).animate({
+          'scrollTop':   $('#tagScroll').offset().top
+      }, 500);
+
       var $listingHolder = $(".listing_holder")
       var route = $(event.target).closest('li').data('id');
+      console.log(route);
       $.ajax({
               url: route,
               method: 'get'
             }).done(function(styles) {
                 $listingHolder.empty();
-                // postman returns empty but below returns
-                // a page ??
-                if (!(jQuery.isEmptyObject(styles))) {
+                console.log('length '+ styles.length);
+                if (styles.length > 0) {
 
-                styles.forEach(function(style) {
-
+                  styles.forEach(function(style) {
+                      console.log('blah');
                     var $listing = $('<div>', {class: "listing"})
                     $listing.data('id', style.id);
                     var $imageDiv = $('<div>', {class: "image"})
@@ -50,10 +48,13 @@ $('document').ready(function(){
                     });
                   }
                   else {
+                        $h1Div = $('<div>', {style: 'margin: 0 auto; text-align: center; padding: 160px 0 160px 0'});
+                        $h1 = $('<h1>', {text : 'No Styles Found'});
 
+                        $h1.appendTo($h1Div);
+                        $h1Div.appendTo($listingHolder);
                   }
-                  });
-
+                });
                 })
 
 

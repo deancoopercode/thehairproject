@@ -1,41 +1,23 @@
 
 <div class = "video_banner">
-
   <div id = "video_holder">
-
     <%= video_tag "slowhair.mp4", controls: false, autoplay: true, muted: true, loop: true, id: "bgvid" %>
-
-    <!-- keep old version here until we are sure we are happy with the above one
-    <video playsinline autoplay muted loop id="bgvid">
-      <source src="video/slowhair.mp4" type="video/mp4">
-    </video> -->
-
   </div>
+  <input class = "new-st-input" type="hidden" name = "tag" id="tags-input">
+
   <div id="mainTagFilter" class = "filter" data-id="<%= @selectedTag %>">
-    <ul>
-      <!-- <a href="/styles/tag/undercut"><li class="tags"><%=image_tag("undercut.png")%><p>Undercut</p></li></a>
-      <a href="/styles/tag/fade"><li class="tags"><%=image_tag("fade.png")%><p>Fade</p></li></a>
-      <a href="/styles/tag/shortbacksides"><li class="tags"><%=image_tag("short-back-sides.png")%><p>Short Back Sides</p></li></a>
-      <a href="/styles/tag/sidepart"><li class="tags"><%=image_tag("side-part.png")%><p>Side Part</p></li></a>
-      <a href="/styles/tag/haircut"><li class="tags"><%=image_tag("haircut.png")%><p>Haircut</p></li></a>
-      <a href="/styles/tag/hairstyling"><li class="tags"><%=image_tag("hairstyling.png")%><p>Hairstyling</p></li></a>
-      <a href="/styles/tag/haircolor"><li class="tags"><%=image_tag("hair-color.png")%><p>Hair Colour</p></li></a>
-      <a href="/styles/tag/other"><li class="tags"><%=image_tag("other.png")%><p>Other</p></li></a> -->
-
+    <ul id="newStyleUl"><a id='tagScroll' name='tagScroll'></a>
       <li data-id="/styles/tag/undercut/" class="tags"><%=image_tag("undercut.png")%><p>Undercut</p></li>
-      <li class="tags"><%=image_tag("fade.png")%><p>Fade</p></li>
-      <li class="tags"><%=image_tag("short-back-sides.png")%><p>Short Back Sides</p></li>
-      <li class="tags"><%=image_tag("side-part.png")%><p>Side Part</p></li>
-      <li class="tags"><%=image_tag("haircut.png")%><p>Haircut</p></li>
-      <li class="tags"><%=image_tag("hairstyling.png")%><p>Hairstyling</p></li>
-      <li class="tags"><%=image_tag("hair-color.png")%><p>Hair Colour</p></li>
-      <li class="tags"><%=image_tag("other.png")%><p>Other</p></li>
+      <li data-id="/styles/tag/fade/" class="tags"><%=image_tag("fade.png")%><p>Fade</p></li>
+      <li data-id="/styles/tag/shortbacksides/" class="tags"><%=image_tag("short-back-sides.png")%><p>Short Back Sides</p></li>
+      <li data-id="/styles/tag/sidepart/" class="tags"><%=image_tag("side-part.png")%><p>Side Part</p></li>
+      <li data-id="/styles/tag/haircut/" class="tags"><%=image_tag("haircut.png")%><p>Haircut</p></li>
+      <li data-id="/styles/tag/hairstyling/" class="tags"><%=image_tag("hairstyling.png")%><p>Hairstyling</p></li>
+      <li data-id="/styles/tag/haircolor/" class="tags"><%=image_tag("hair-color.png")%><p>Hair Colour</p></li>
+      <li data-id="/styles/tag/other/" class="tags"><%=image_tag("other.png")%><p>Other</p></li>
     </ul>
-
-</div>
-
+  </div>
 <div class="listing_holder">
-
   <% @styles.each do |style| %>
     <div class="listing" data-id="<%= style.id %>">
       <div class="image">
@@ -54,5 +36,4 @@
       </div>
     </div>
   <% end %>
-
 </div>

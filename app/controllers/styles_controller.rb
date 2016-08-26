@@ -10,7 +10,7 @@ class StylesController < ApplicationController
     #@style = Style.where(tag: params[:text]),:include => [:user, :likes]
     # if @style.count
     render json: Style.where(tag: params[:text]),:include => [:user, :likes]
-    # render json: {error: 'no record found'}, status: 404
+     #render json: {error: 'no record found'}, status: 404
   end
 
 
