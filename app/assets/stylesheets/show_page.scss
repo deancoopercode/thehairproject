@@ -5,7 +5,6 @@
   text-decoration: none;
 }
 
-
 #delete-post {
   background-color: #590925;
   color: white;
@@ -18,8 +17,7 @@
   margin-left: 20px;
 }
 
-
-#go-to-edit{
+#go-to-edit {
   background-color: #01FDF6;
   border: 2px solid #ADF5FF;
   padding: 4px;
@@ -27,7 +25,7 @@
   margin-right: 20px;
 }
 
-#submit-comment{
+#submit-comment {
   background-color: black;
   color: white;
   border: 0px;
@@ -42,6 +40,16 @@
   // background-color: #2A2A2A;
 }
 
+.left_container {
+  width: 69%;
+  float: left;
+  padding-top: 30px;
+}
+
+#thumbnail-slider {
+  width: 100%;
+  max-width: 900px;
+}
 
 .description {
   color: white;
@@ -64,6 +72,6 @@ table {
   color: white;
 }
 
-#studioWebLink{
+#studioWebLink {
   color: lightgrey;
 }

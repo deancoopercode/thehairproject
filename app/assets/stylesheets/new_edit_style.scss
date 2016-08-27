@@ -1,4 +1,4 @@
-.edit-wrapper, .new-wrapper{
+.edit-wrapper, .new-wrapper {
   background-color: #2A2A2A;
 }
 
@@ -17,7 +17,7 @@
   border: 2px solid #631A86;
 }
 
-.edit-st-input:focus{
+.edit-st-input:focus {
   border-color: #4d90fe;
 }
 
@@ -25,22 +25,21 @@
   border-color: #4d90fe;
 }
 
-
 #new-edit-btn {
-    background-color: #9593D9;
-    border: 1px solid #631A86;
-    border-radius: 50px;
-    height: 90px;
-    width: 90px;
-    font-size: 20px;
-    color: white;
-    margin-top: 10px;
-    margin-bottom: 50px;
-    position: absolute;
-    bottom: 0;
-    right: 45vw;
-    z-index: 1;
-    // margin: 30px;
+  background-color: #9593D9;
+  border: 1px solid #631A86;
+  border-radius: 50px;
+  height: 90px;
+  width: 90px;
+  font-size: 20px;
+  color: white;
+  margin-top: 10px;
+  margin-bottom: 50px;
+  position: absolute;
+  bottom: 0;
+  right: 45vw;
+  z-index: 1;
+  // margin: 30px;
 }
 
 #new-edit-btn:hover {
