@@ -9,7 +9,6 @@ class StylesController < ApplicationController
       .joins(:likes)
       .group("style_id, hairpicfront, styles.id")
       .order("likes_count desc")
-      # binding.pry
   end
 
   def filterbytag

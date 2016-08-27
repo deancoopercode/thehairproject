@@ -1,14 +1,10 @@
-
 <div class = "wrapper">
-
-
   <div class="listing">
     <% @styles.each do |style| %>
         <div class="ui-style" data-id="<%= style.id %>">
           <div class="centered content">
             <%= style.user.name %>
           </div>
-
           <div class="image">
             <a href="/styles/<%=style.id%>">
               <img src="<%= style.hairpicfront %>" alt=""></a>
@@ -19,10 +15,6 @@
           </div>
         </div>
     <% end %>
-
     </div>
   </div>
-
-
-
 </div>

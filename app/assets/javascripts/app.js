@@ -4,51 +4,51 @@ $('document').ready(function(){
     var route = $(event.target).closest('li').data('id');
 
     $.ajax({
-            url: route,
-            method: 'get'
-          }).done(function(styles) {
-              $listingHolder.empty();
-              if (styles.length > 0) {
-                styles.forEach(function(style) {
-                  var $listing = $('<div>', {class: "listing"})
-                  $listing.data('id', style.id);
-                  var $imageDiv = $('<div>', {class: "image"})
-                  var $anchorDiv = ($('<a>', {href: '/styles/' + style.id}))
-                      .append($('<img>', {src: style.hairpicfront}))
-                  $anchorDiv.appendTo($imageDiv);
-                  var $centeredContentDiv = $('<div>').addClass('centered content')
+      url: route,
+      method: 'get'
+    }).done(function(styles) {
+        $listingHolder.empty();
+        if (styles.length > 0) {
+          styles.forEach(function(style) {
+            var $listing = $('<div>', {class: "listing"})
+            $listing.data('id', style.id);
+            var $imageDiv = $('<div>', {class: "image"})
+            var $anchorDiv = ($('<a>', {href: '/styles/' + style.id}))
+                .append($('<img>', {src: style.hairpicfront}))
+            $anchorDiv.appendTo($imageDiv);
+            var $centeredContentDiv = $('<div>').addClass('centered content')
 
-                  if (style.likes.length == 1) {
-                    var $likeSpan = $('<span>', {class: "like-count",text: style.likes.length + ' Like'})
-                  }
-                  else {
-                    var $likeSpan = $('<span>', {class: "like-count",text: style.likes.length + ' Likes'})
-                  }
+            if (style.likes.length == 1) {
+              var $likeSpan = $('<span>', {class: "like-count",text: style.likes.length + ' Like'})
+            }
+            else {
+              var $likeSpan = $('<span>', {class: "like-count",text: style.likes.length + ' Likes'})
+            }
 
-                  var $footerSpan = $('<span>', {class: "star right js-like",html: '&hearts;'})
+            var $footerSpan = $('<span>', {class: "star right js-like",html: '&hearts;'})
 
-                  $footerSpan.on('click', heartClicked);
+            $footerSpan.on('click', heartClicked);
 
-                  $likeSpan.appendTo($centeredContentDiv);
-                  $footerSpan.appendTo($centeredContentDiv);
-                  $imageDiv.appendTo($listing);
-                  $centeredContentDiv.appendTo($listing);
-                  $listing.appendTo($listingHolder);
+            $likeSpan.appendTo($centeredContentDiv);
+            $footerSpan.appendTo($centeredContentDiv);
+            $imageDiv.appendTo($listing);
+            $centeredContentDiv.appendTo($listing);
+            $listing.appendTo($listingHolder);
 
-                });
-                }
-                else {
-                  $h1Div = $('<div>', {style: 'margin: 0 auto; text-align: center; padding: 160px 0 160px 0'});
-                  $h1 = $('<h1>', {text : 'No Styles Found'});
+          });
+          }
+          else {
+            $h1Div = $('<div>', {style: 'margin: 0 auto; text-align: center; padding: 160px 0 160px 0'});
+            $h1 = $('<h1>', {text : 'No Styles Found'});
 
-                  $h1.appendTo($h1Div);
-                  $h1Div.appendTo($listingHolder);
-                }
-              });
+            $h1.appendTo($h1Div);
+            $h1Div.appendTo($listingHolder);
+          }
+        });
 
-              $(document.body).animate({'scrollTop':   $('#tagScroll').offset().top}, 500);
+        $(document.body).animate({'scrollTop':   $('#tagScroll').offset().top}, 500);
 
-              })
+        })
 
 
 $('#newStyleUl li').on('click', function() {

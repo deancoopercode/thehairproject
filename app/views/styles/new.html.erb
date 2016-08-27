@@ -1,11 +1,6 @@
-
 <div class="new-wrapper">
-
-
     <form id = "add-new-style" action="/styles" method="post">
       <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
-
-
         <input class = "new-st-input" type="text" name = "hairdressername" placeholder="enter hairdresser name">
         <input class = "new-st-input" type="text" name = "hairpicfront" placeholder="enter pic front">
         <input class = "new-st-input" type="text" name = "hairpicback" placeholder="enter pic back">
@@ -14,7 +9,6 @@
         <input class = "new-st-input" type="text" name = "rating" placeholder = "rate experience 1 - 5">
         <input class = "new-st-input" type="hidden" name = "tag" id="tags-input">
         <input class = "new-st-input" type="text" name = "studiowebsiteurl" placeholder="enter website">
-
         <div class = "filter">
           <ul id="newStyleUl">
             <li data-id="undercut" class="tags"><%=image_tag("undercut.png")%><p>Undercut</p></li>
@@ -26,21 +20,15 @@
             <li data-id="haircolor" class="tags"><%=image_tag("hair-color.png")%><p>Hair Colour</p></li>
             <li data-id="other" class="tags"><%=image_tag("other.png")%><p>Other</p></li>
           </ul>
-      </div>
-
+        </div>
         <input type="hidden" name="studioname" id="studio_location" value="">
         <input type="hidden" name="lat" id="studio_lat" value="">
         <input type="hidden" name="lng" id="studio_lng" value="">
-
         <input class = "new-st-input" type="text" placeholder="enter studio name" size="50" id="pac-input" class="controls" value="">
-
         <button id = "new-edit-btn">create post</button>
-
         <div id="map"></div>
     </form>
-
 </div>
-
 
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC-_tjRXvZwDBMsFKx2He46Jv3MBw-_oT0&libraries=places&callback=initMap"
         async defer></script>

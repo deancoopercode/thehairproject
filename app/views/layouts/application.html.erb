@@ -16,7 +16,6 @@
   <body>
 
     <div class="wrapper">
-
       <header>
         <div class = "nav_bar">
           <div class="logo">
@@ -24,7 +23,6 @@
           </div>
           <div class="login_bar">
             <div class="nav-top">
-
               <% if logged_in? %>
                 <div id="currentlyLoggedInDiv">
                   <span id="loggedinHeader">Hi there <%= current_user.name %> </span>
@@ -34,7 +32,6 @@
                   <button id = "logout">Logout</button>
                 </form>
               <% end %>
-
               <% if !logged_in? %>
               <form action="/session" method="post">
                 <input id = "login_email" type="text" name="email" placeholder="enter email">
@@ -43,9 +40,8 @@
                 <button><a id="signupLink" href="/users/new">Sign Up</a></button>
               </form>
               <% end %>
-
             </div>
-            <!-- <hr> -->
+
             <div class="nav-bottom">
               <ul>
                 <a href="/styles"><li class="bottom-line">home</li></a>
