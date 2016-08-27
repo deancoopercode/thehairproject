@@ -1,24 +1,19 @@
 // Place all the styles related to the styles controller here.
-
 // They will automatically be included in application.css.
-
 // You can use Sass (SCSS) here: http://sass-lang.com/
-
 // font-family: 'Lobster', cursive;
-
 // font-family: 'Raleway', sans-serif;
-
 // font-family: 'Cinzel', serif;
 // wrapper
 
 * {
-  box-sizing : border-box;
+  box-sizing: border-box;
   font-family: 'Raleway', sans-serif;
 }
 
 body,
 html {
-  margin : 0;
+  margin: 0;
   background-color: black;
 }
 
@@ -27,29 +22,29 @@ html {
   color: white;
   font-size: 1em;
   font-family: 'Cinzel', serif;
-  margin: 5px 0px 15px 0px;
+  margin: 5px 0 15px;
   height: 80px;
 }
 
 .nav-top {
   text-align: right;
   width: 400px;
-  float:right;
+  float: right;
 }
 
 .nav-bottom {
   text-align: right;
   width: 600px;
-  float:right;
+  float: right;
 }
 
 .nav-bottom form {
-  height           : 0px;
-  padding          : 0px 10px 0px 10px;
-  color            : white;
+  height: 0;
+  padding: 0 10px;
+  color: white;
   height: 40px;
-  border: 0px;
-  font-size        : 1em;
+  border: 0;
+  font-size: 1em;
   margin: 0;
 }
 
@@ -58,10 +53,9 @@ html {
   background-color: black;
   height: 100%;
   color: white;
-  border: 0px;
+  border: 0;
   font-size: 0.9em;
-  transition : 0.5s;
-
+  transition: 0.5s;
 }
 
 // #top-line {
@@ -83,20 +77,20 @@ html {
 .nav-top button {
   background-color: black;
   color: white;
-  border: 0px;
+  border: 0;
   // border: 1px solid white;
   border-radius: 5px;
   line-height: 20px;
-  width:60px;
+  width: 60px;
 }
 
 hr {
-margin: 0px;
-padding: 0px;
-opacity: 0.2;
-width: 30%;
-right: 0px;
-display: absolute;
+  margin: 0;
+  padding: 0;
+  opacity: 0.2;
+  width: 30%;
+  right: 0;
+  display: absolute;
 }
 
 .logo {
@@ -115,7 +109,7 @@ display: absolute;
 h1 {
   font-family: 'Cinzel', serif;
   font-size: 40px;
-  margin : 10px 10px;
+  margin: 10px;
   display: inline-block;
   color: #F4F4F6;
   font-weight: lighter;
@@ -124,48 +118,50 @@ h1 {
 }
 
 .wrapper {
-  width : 100%;
-  margin    : 0 auto;
+  width: 100%;
+  margin: 0 auto;
 }
 
 #video_holder {
-  z-index  : 0;
-  position : relative;
-  top      : 0px;
-  width    : 100%;
-  height   : 530px;
-  overflow : hidden;
+  z-index: 0;
+  position: relative;
+  top: 0;
+  width: 100%;
+  height: 530px;
+  overflow: hidden;
 }
 
 video#bgvid {
-  z-index  : -100;
-  position : relative;
-  width    : 100%;
+  z-index: -100;
+  position: relative;
+  width: 100%;
   // -ms-transform     : translateX(10%);
   // -webkit-transform : translateX(10%);
   // transform         : translateX(10%);
 }
 
-// Deans below
+
+//  ===============    Deans
 
 .avatar {
-  display        : inline-block;
-  width          : 2em;
-  height         : 2em;
-  border-radius  : 100%;
-  vertical-align : middle;
+  display: inline-block;
+  width: 2em;
+  height: 2em;
+  border-radius: 100%;
+  vertical-align: middle;
   /* same as 2em but less to worry about */
   /*
   these 2 go together - without this it was having spaces in the bottom, and DT
   wasnt centered
   */
 }
+
 .spanmiddle {
-  width: 50%;
+    width: 50%;
 }
 
 a {
-  color           : white;
+  color: white;
   font-family: 'Raleway', sans-serif;
   text-decoration: none;
   display: inline-block;
@@ -176,7 +172,7 @@ a {
   border: 1px solid white;
   border-radius: 5px;
   line-height: 20px;
-  width:60px;
+  width: 60px;
 }
 
 #login {
@@ -184,7 +180,7 @@ a {
   border: 1px solid white;
   border-radius: 5px;
   line-height: 15px;
-  width:50px;
+  width: 50px;
   margin-left: 10px;
 }
 
@@ -193,7 +189,7 @@ a {
   border: 1px solid white;
   border-radius: 5px;
   line-height: 15px;
-  width:60px;
+  width: 60px;
   margin-left: 10px;
 }
 
@@ -208,83 +204,81 @@ a {
 }
 
 .content {
-  padding : .7em;
+  padding: 0.7em;
 }
 
 .right {
-  float : right;
+  float: right;
 }
 
 .listing-holder {
-  display   : flex;
-  width     : 100%;
-  flex-wrap : wrap;
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
 }
 
 .listing {
-  display          : inline-block;
-  width            : 30%;
-  margin           : 1.5%;
-  color            : white;
-  background-color : black;
-  vertical-align   : top;
-  font-family      : 'Cinzel',
-                     serif;
-  font-size        : 0.8em;
-  font-weight      : 400;
+  display: inline-block;
+  width: 30%;
+  margin: 1.5%;
+  color: white;
+  background-color: black;
+  vertical-align: top;
+  font-family: 'Cinzel', serif;
+  font-size: 0.8em;
+  font-weight: 400;
 }
 
 .centered {
-  padding        : 5px 15px 8px 15px;
-  text-align     : left;
-  vertical-align : middle;
-  line-height    : 1.5em;
+  padding: 5px 15px 8px;
+  text-align: left;
+  vertical-align: middle;
+  line-height: 1.5em;
 }
 
 h4 {
-  margin  : 0;
-  padding : 0;
+  margin: 0;
+  padding: 0;
 }
 
 .star {
-  transition : 1s;
+  transition: 1s;
   width: 5px;
   font-size: 20px;
 }
 
-.image img {
-  width : 100%;
-}
-
 .star:hover {
-  color   : red;
-  opacity : 1;
-  cursor  : pointer;
+  color: red;
+  opacity: 1;
+  cursor: pointer;
   /* display: block; */
 }
 
+.image img {
+  width: 100%;
+}
+
 .filter {
-  margin-top       : 15px;
-  padding          : 5px;
-  background-color : black;;
-  text-align       : left;
-  text-decoration  : none;
+  margin-top: 15px;
+  padding: 5px;
+  background-color: black;
+  text-align: left;
+  text-decoration: none;
   color: black;
   text-align: center;
 }
 
 .filter > ul {
   padding-left: 20px;
-  padding-right: 0px;
+  padding-right: 0;
   display: inline-block;
   color: black;
-
 }
 
 .ul {
-  margin     : 0px;
-  padding    : 10px;
-  list-style : none;
+  margin: 0;
+  padding: 10px;
+  list-style: none;
   list-style-type: none;
 }
 
@@ -293,40 +287,40 @@ ul {
 }
 
 .tags {
-  display          : inline-block;
-  padding-right    : 20px;
-  border-radius    : 20px;
-  background-color : #E6E6E9;
-  text-align       : left;
+  display: inline-block;
+  padding-right: 20px;
+  border-radius: 20px;
+  background-color: #E6E6E9;
+  text-align: left;
   // transition       : 0.5s;
-  cursor           : pointer;
+  cursor: pointer;
   // border-bottom: 1px solid #adadb4;
 }
 
 .tags:hover {
-  background-color : #9593D9;
+    background-color: #9593D9;
 }
 
 .tags > img {
-  height         : 30px;
-  float          : left;
-  vertical-align : top;
+  height: 30px;
+  float: left;
+  vertical-align: top;
 }
 
 .tags > p {
-  float          : left;
-  margin         : 0px;
-  padding        : 0px 0px 0px 10px;
-  vertical-align : middle;
-  font-size      : 0.8em;
-  line-height    : 30px;
+  float: left;
+  margin: 0;
+  padding: 0 0 0 10px;
+  vertical-align: middle;
+  font-size: 0.8em;
+  line-height: 30px;
   color: black;
 }
 
 .footer {
   background-color: black;
   color: white;
-  padding: 15px 0 5px 0;
+  padding: 15px 0 5px;
   font-size: 0.8em;
   font-family: 'Raleway', sans-serif;
   word-spacing: 8pt;
@@ -339,51 +333,16 @@ ul {
   text-align: center;
 }
 
-#thumbnail-slider {
-    width:100%;
-    max-width:900px;
-}
-
 
 .bottom-line {
   display: inline-block;
   color: white;
-  padding: 0 10px 0 10px;
+  padding: 0 10px;
   font-family: 'Raleway', sans-serif;
-  color: white;
   font-size: 12px;
 }
 
-.left_container {
-  width: 69%;
-  float: left;
-  padding-top:30px;
+button,
+span {
+    font-family: 'Raleway', sans-serif;
 }
-
-button, span {
-  font-family: 'Raleway', sans-serif;
-}
-
-
-// .description, h6 {
-//   color: white;
-//   font-family: 'Raleway', sans-serif;
-//   font-size: 20px;
-// }
-//
-// .table-styleDescription {
-//   display: inline-block;
-//   margin-top: 50px;
-// }
-
-// .commentsSection {
-//   background-color: black;
-//   width: 90%;
-//   margin: 0 auto;
-// }
-//
-// .newCommentContainer{
-//   // width: 90%;
-//   text-align: center;
-//   margin-top: 50px;
-// }

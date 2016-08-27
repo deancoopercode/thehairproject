@@ -1,5 +1,4 @@
 
-
 function initMap() {
     // scrollwheel: false;
     var map = new google.maps.Map(document.getElementById('map'), {
@@ -68,8 +67,6 @@ function initMap() {
       // console.log(place.name);
       $('#studio_location').val(place.name);
 
-
-
       // console.log(marker.getPosition().lat());
       // console.log(marker.getPosition().lng());
       var latCoordinate = marker.getPosition().lat();
@@ -80,8 +77,6 @@ function initMap() {
       $('#studio_lat').val(latCoordinate);
       $('#studio_lng').val(lngCoordinate);
       // console.log($('#studio_lat').val(latCoordinate));
-
-
 
     });
 
